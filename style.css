@@ -53,6 +53,7 @@ nav a {
     color: var(--secondary-color);
 }
 
+/* Sección héroe */
 .hero {
     height: 700px;
     display: flex;
@@ -81,28 +82,28 @@ h1 {
     width: 450px;
     margin-bottom: 50px;
 }
+/* Botones */
+.cta-button, .cta-button-1 {
+    padding: 0.5rem 1.61rem;
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
 
 .cta-button {
     background-color: var(--primary-color);
     color: white;
-    padding: 0.5rem 1.61rem;
     border: none;
-    border-radius: 18px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 600;
-   
 }
+
 .cta-button-1 {
     background-color: rgba(255, 255, 255, 0.136);
     color: var(--text-color);
-    padding: 0.5rem 1.61rem;
-    border:solid 1px var(--text-color);
-    border-radius: 18px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 600;
+    border: solid 1px var(--text-color);
 }
+
+/* Descripción del programa */
 .program-description{
     display: flex; /* Activa Flexbox */
     align-items: center; /* Alinea verticalmente al centro */
@@ -111,7 +112,7 @@ h1 {
 h2{
     width: 600px;
     margin-left: 50px;
-    font-family:'Poppins';
+    font-family: var(--font-title);
     font-size: 20px;
     text-align: left;
     padding: 2rem;
@@ -119,19 +120,20 @@ h2{
 .descripcion{
 width: 600px;
     marginr: 50px;
-    font-family:'Poppins';
+    font-family:var(--font-body);
     font-size: 20px;
     text-align: left;
     padding: 2rem;
 }
+
+/* Sección de pasos */
 .steps {
     display: flex;
     justify-content: center; /* Centra verticalmente */
     align-items: center;
     flex-wrap: nowrap;
     padding: 1rem;
-    margin: 50px;
-    margin-top: 0px;
+    margin: 50px 50px 0;
 }
 
 .step-card {
@@ -143,6 +145,7 @@ width: 600px;
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: .5rem;
 }
 
 .step-card:hover {
@@ -172,6 +175,7 @@ width: 600px;
 
 }
 
+/* Sección de exámenes médicos */
 .examenes-medicos {
     background-color: var(--secondary-color);
     color: white;
