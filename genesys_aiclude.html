@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesys - Programa de Bienestar Laboral Integral</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #93DDC2;
+            --secondary-color: #393e46;
+            --text-color: #232931;
+            --background-color: #eeeeee;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        .background-container {
+        background-image: url(assets/Foto\ portada.png);
+        background-size: cover;
+        background-position: center;
+        min-height: 100%; /* Asegura que el fondo cubra toda la altura de la pantalla */
+    }
+
+        header {
+            background-color: transparent;
+            position: absolute;
+            width: 80%;
+            margin: 50px;
+            margin-left: 120px;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+        }
+
+        nav a {
+            margin-left: 1rem;
+            text-decoration: none;
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            height: 700px;
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            width: 700px;
+            padding: 2rem;
+            margin-left: 50px;
+        }
+
+        h1 {
+            font-family:'Rubik Mono One', monospace;
+            color: var(--text-color);
+            font-size: 34px;
+        }
+        .green{
+            color: var(--primary-color);
+        }
+
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 18px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .cta-button-1 {
+            background-color: transparent;
+            color: var(--text-color);
+            padding: 0.5rem 1rem;
+            border:solid 1px var(--text-color);
+            border-radius: 18px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .program-description {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 2rem;
+        }
+
+        .step-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1rem;
+            width: 18%;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .step-card h3 {
+            color: var(--primary-color);
+        }
+
+        .examenes-medicos {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <header>
+            <img src="assets/Logo_compuesto_fullcolor_horizontal_negro@2x.png" alt="Genesys Logo" class="logo">
+            <nav>
+                <a href="#">Nosotros</a>
+                <a href="#">FAQ</a>
+                <a href="#">SST</a>
+                <a href="#">genesys bi</a>
+                <a href="#" class="cta-button-1">Log In</a>
+                <a href="#" class="cta-button">Sign Up</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1><span class="green">Cumple</span> con todos los <span class="green">requisitos</span> en SALUD LABORAL <span class="green">(SGSST)</span></h1>
+                <p>No vuelvas a preocuparte. Trabajamos para brindarte una mejor vida, encuentra aquí un proveedor confiable que se ajusta a tus necesidades. Evita sanciones de ley.</p>
+                <button class="cta-button">Empieza aquí</button>
+            </div>
+        </section>
+    </div>
+    <section class="program-description">
+        <h2>Programa de Bienestar Laboral Integral</h2>
+        <p>Con nuestra solución integral de SST, combinamos tecnología avanzada y experiencia para crear una cultura de bienestar que impulsa la productividad y el compromiso. Te ofrecemos una estrategia personalizada para el éxito y la seguridad de tu empresa.</p>
+    </section>
+
+    <section class="steps">
+        <div class="step-card">
+            <h3>PASO 1</h3>
+            <h4>Matriz de Riesgos Profesional</h4>
+            <p>Identificación y evaluación de riesgos laborales</p>
+            <button class="cta-button">Inicia Aquí</button>
+        </div>
+        <div class="step-card">
+            <h3>PASO 2</h3>
+            <h4>Profesiograma</h4>
+            <p>Perfiles de cargo y requerimientos de salud</p>
+            <button class="cta-button">Solicítalo Aquí</button>
+        </div>
+        <div class="step-card">
+            <h3>PASO 3</h3>
+            <h4>Exámenes Médicos Ocupacionales</h4>
+            <p>Evaluación médica pre-ingreso y periódicas</p>
+            <button class="cta-button">Cotiza Ahora</button>
+        </div>
+        <div class="step-card">
+            <h3>PASO 4</h3>
+            <h4>Capacitación en SST</h4>
+            <p>Formación continua para empleados y directivos</p>
+            <button class="cta-button">Más Información</button>
+        </div>
+        <div class="step-card">
+            <h3>PASO 5</h3>
+            <h4>Plan de Emergencias</h4>
+            <p>Preparación y respuesta ante situaciones críticas</p>
+            <button class="cta-button">Solicítalo Ya</button>
+        </div>
+    </section>
+
+    <section class="examenes-medicos">
+        <h2>EXÁMENES MÉDICO OCUPACIONALES</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet, tellus non tincidunt venenatis, neque felis varius mauris, nec Aenean est lorem eget ipsum.</p>
+    </section>
+</body>
+</html>
