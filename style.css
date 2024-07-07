@@ -4,6 +4,7 @@
     --secondary-color: #393e46;
     --text-color: #232931;
     --background-color:#f3f0f0;
+    --alternative-color:#FCF4AB;
     --font-title: "Poppins", sans-serif;
     --font-body: "Raleway", sans-serif;
 }
@@ -19,7 +20,7 @@ body {
 
 /* Contenedor de fondo */
 .background-container {
-background-image: url('assets/Foto_portada.png');
+background-image: url('assets/Foto_portada_editada.png');
 background-size: cover;
 background-position: center;
 background-attachment: fixed;
@@ -48,9 +49,17 @@ header {
 nav a {
     font-family: var(--font-body);
     font-size: 14px; 
-    margin-right: 2.2rem;
+    margin-right: 4rem;
     text-decoration: none;
     color: var(--secondary-color);
+    transition: 0.2s;
+}
+
+nav a:hover {
+    font-size: 18px; 
+    color: var(--primary-color);
+    font-weight: 800;
+    transition: 0.2s;
 }
 
 /* Sección héroe */
@@ -89,18 +98,22 @@ h1 {
     cursor: pointer;
     font-size: 14px;
     font-weight: 600;
+    font-family: var(--font-body);
+    transition: 0.2s;
 }
 
 .cta-button {
     background-color: var(--primary-color);
     color: white;
     border: none;
+    margin: 0 1rem;
 }
 
 .cta-button-1 {
-    background-color: rgba(255, 255, 255, 0.136);
+    background-color: rgba(255, 255, 255, 0.081);
     color: var(--text-color);
     border: solid 1px var(--text-color);
+    margin-right: 2.5rem;
 }
 
 /* Descripción del programa */
@@ -110,16 +123,17 @@ h1 {
     gap: 20px; /* Espacio entre el título y el párrafo */
 }
 h2{
-    width: 600px;
-    margin-left: 50px;
+    width: 500px;
+    margin-left: 150px;
     font-family: var(--font-title);
-    font-size: 20px;
+    font-size: 50px;
     text-align: left;
-    padding: 2rem;
+    padding: 1rem;
+    line-height: 100%;
 }
 .descripcion{
-width: 600px;
-    marginr: 50px;
+    width: 600px;
+    margin: 50px;
     font-family:var(--font-body);
     font-size: 20px;
     text-align: left;
@@ -133,48 +147,110 @@ width: 600px;
     align-items: center;
     flex-wrap: nowrap;
     padding: 1rem;
-    margin: 50px 50px 0;
-}
+    margin: 20px 50px 40px;
+    }
 
 .step-card {
-    background-color: antiquewhite;
-    border-radius: 18px;
+    background-color: rgb(233, 228, 220);
+    border-radius: 12px;
     padding: 1rem;
     width: 15%;
+    height: 215px;
     text-align: center;
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: .5rem;
+    hyphens: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .step-card:hover {
     transform: translateY(-40px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color:var(--primary-color);
 }
 
 .step-card h3 {
     color: var(--primary-color);
     position: absolute;
     top: -90px;
-    left: 85px;
+    left: 30%;
+    transform: translateY(-25%);
+    transform-origin: left center;
+    white-space: nowrap;
     font-size: 28px;
     font-family: var(--font-title);
+    font-weight: 900;
+    text-align: center;
+    transition: 0.2s;
 }
+
+.step-card:hover h3{
+    transition: .2s;
+    font-size: 40px;
+    left: 22%;
+}
+
 .step-card h4 {
     font-family: var(--font-body);
-    font-size: 12px;
-    color: var(--text-color);
+    font-size: 11px;
+    color: var(--alternative-color);
     background-color: var(--primary-color);
     border-radius: 23px;
-    padding: 10px 20px;
+    padding: 10px 10px;
     position: relative;
     top: -45px;
-    left: 30px;
+    left: 0px;
     width: 120px;
+    transition: 0.2s;
+
+
+}
+.step-card:hover h4{
+    background-color:var(--alternative-color);
+    color:var(--text-color);
 
 }
 
+.step-card p{
+    font-family: var(--font-body);
+    font-weight:300;
+    margin-bottom: 30%;
+    margin-top: 0px;
+    padding: 0px;
+    height:max-content;
+    text-align: center;
+    transition: 0.2s;    
+    
+}
+.step-card:hover p{
+    color: var(--alternative-color);
+    font-weight: 700;
+}
+
+.step-card .cta-button{
+    margin-top:auto;
+    font-family: var(--font-title);
+    font-size: 12px;
+    padding: 7px;
+    height: 40px;
+    width: 150px;
+    border-radius: 12px;
+    background-color: var(--alternative-color);
+    color: var(--text-color);
+    box-shadow:0 4px 6px rgba(0, 0, 0, 0.1) ;
+    transition: 0.2s;
+}
+.step-card:hover .cta-button {
+    background-color: #f3f0f0;
+    color: var(--primary-color);
+    
+}
+    
 /* Sección de exámenes médicos */
 .examenes-medicos {
     background-color: var(--secondary-color);

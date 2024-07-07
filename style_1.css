@@ -1,0 +1,134 @@
+body {
+    background-image: url('assets/Foto\ portada.png'); /* Reemplaza 'fondo.jpg' con tu imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Opcional */
+    /* Estilos generales */
+    font-family: 'Arial', sans-serif; /* O la fuente que prefieras */
+    margin: 150px;
+    color: #333; /* Color de texto principal */   
+}
+main {
+    padding-top: 0px; /* Ajusta este valor según la altura de tu menú */
+}
+
+header {
+    background-color: transparent; /* Fondo transparente */
+    position: absolute; /* Posición absoluta para superponer */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Asegura que el menú esté por encima del contenido */
+}
+
+.container {    
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+nav a:hover {
+    color: #007bff; /* Cambia el color al pasar el mouse */
+}
+
+.login-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Estilos para secciones específicas */
+.hero {
+    text-align: left;
+    padding-top: -150px 0;
+    width: 500px;
+    color: #fff; /* Texto blanco para el fondo oscuro */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.hero button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #0056b3;
+}
+/* Estilos para las palabras resaltadas */
+.hero .green {
+    color: #28a745; /* Verde */
+}
+
+.hero .blue {
+    color: #007bff; /* Azul */
+}
+
+.hero .orange {
+    color: #fd7e14; /* Naranja */
+}
+
+
+/* ... (Estilos para otras secciones: features, program, steps, cta) */
+
+/* Animaciones */
+.feature {
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px); /* Desplazado hacia abajo */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transiciones suaves */
+}
+
+.feature.show { /* Clase para mostrar la característica */
+    opacity: 1;
+    transform: translateY(0);
+}
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta el ancho de las tarjetas */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.step {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
