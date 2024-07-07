@@ -337,8 +337,8 @@ footer {
         padding: 1rem;
     }
 
-    h1 {
-        font-size: 2rem;
+    .hero h1 {
+        font-size: 200px;
     }
 
     .steps {
