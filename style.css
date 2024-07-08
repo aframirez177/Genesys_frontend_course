@@ -53,7 +53,7 @@ nav a {
     text-decoration: none;
     color: var(--secondary-color);
     transition: 0.2s;
-}
+    }
 
 nav a:hover {
     font-size: 18px; 
@@ -128,7 +128,7 @@ h2{
     font-family: var(--font-title);
     font-size: 50px;
     text-align: left;
-    padding: 1rem;
+    padding: 0rem;
     line-height: 100%;
 }
 .descripcion{
@@ -136,7 +136,7 @@ h2{
     margin: 50px;
     font-family:var(--font-body);
     font-size: 20px;
-    text-align: left;
+    text-align: right;
     padding: 2rem;
 }
 
@@ -145,22 +145,23 @@ h2{
     display: flex;
     justify-content: center; /* Centra verticalmente */
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     padding: 1rem;
-    margin: 20px 50px 40px;
+    margin: 0px 50px;
+    top: -300px;
     }
 
 .step-card {
     background-color: rgb(233, 228, 220);
     border-radius: 12px;
     padding: 1rem;
-    width: 15%;
-    height: 215px;
+    width: 12%;
+    height: 180px;
     text-align: center;
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: .5rem;
+    margin: 4rem 1rem;
     hyphens: none;
     display: flex;
     flex-direction: column;
@@ -178,7 +179,6 @@ h2{
     color: var(--primary-color);
     position: absolute;
     top: -90px;
-    left: 30%;
     transform: translateY(-25%);
     transform-origin: left center;
     white-space: nowrap;
@@ -192,7 +192,7 @@ h2{
 .step-card:hover h3{
     transition: .2s;
     font-size: 40px;
-    left: 22%;
+    top: -100px;
 }
 
 .step-card h4 {
@@ -202,9 +202,9 @@ h2{
     background-color: var(--primary-color);
     border-radius: 23px;
     padding: 10px 10px;
-    position: relative;
-    top: -45px;
-    left: 0px;
+    position: absolute;
+    top: -30px;
+    text-align: center;
     width: 120px;
     transition: 0.2s;
 
@@ -219,12 +219,13 @@ h2{
 .step-card p{
     font-family: var(--font-body);
     font-weight:300;
-    margin-bottom: 30%;
-    margin-top: 0px;
+    margin-bottom: 10%;
+    margin-top: 30px;
     padding: 0px;
     height:max-content;
     text-align: center;
-    transition: 0.2s;    
+    transition: 0.2s; 
+    width: 60%;   
     
 }
 .step-card:hover p{
