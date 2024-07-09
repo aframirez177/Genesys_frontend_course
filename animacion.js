@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DOM Content Loaded");
-    const stepCards = document.querySelectorAll('.step-card');
-    console.log("Number of step cards:", stepCards.length);
+    const cards = document.querySelectorAll('.step-card, .client-card');
+    console.log("Number of cards:", cards.length);
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }, {
-        threshold: 0.05,
+        threshold: 0.1,
         rootMargin: '0px 0px -100px 0px'
     });
 
-    stepCards.forEach(card => {
+    cards.forEach(card => {
         observer.observe(card);
     });
 });
