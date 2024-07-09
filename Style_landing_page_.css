@@ -32,7 +32,7 @@ header {
     background-color: transparent;
     position: absolute;
     width: 70%;
-    margin: 50px 120px;
+    margin: 20px 70px;
     padding: 0 50px;
     display: flex;
     justify-content: space-between;
@@ -40,9 +40,19 @@ header {
     z-index: 10;
     transition: background-color 0.3s ease;
 }
+header a:focus{
+    outline: none;
+}
 
 .logo {
     width: 180px;
+    height: auto;
+    margin: 10px 0px;
+    transition: 0.2s;
+}
+
+.logo:hover{
+    width: 190px;
     height: auto;
     margin: 10px 0px;
 }
@@ -60,21 +70,6 @@ nav a {
     color: var(--secondary-color);
     transition: 0.2s;
     position: relative;
-}
-
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: var(--primary-color);
-    transition: width 0.3s ease;
-}
-
-nav a:hover::after {
-    width: 100%;
 }
 
 nav a:hover {
