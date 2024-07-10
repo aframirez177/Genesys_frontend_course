@@ -249,7 +249,7 @@ h1 {
     text-align: center;
     transition: 0.2s; 
     width: 60%;   
-    font-size: 1vw;
+    font-size: 0.9vw;
     
 }
 .step-card:hover p{
@@ -471,7 +471,7 @@ h1 {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    padding: 3rem;
 }
 
 .faq-item.active {

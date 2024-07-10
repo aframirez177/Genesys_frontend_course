@@ -1,6 +1,7 @@
+    //aparecer a mitad de la pagina
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DOM Content Loaded");
-    const cards = document.querySelectorAll('.step-card, .client-card, .faq-container');
+    const cards = document.querySelectorAll('.step-card, .client-card');
     console.log("Number of cards:", cards.length);
     
     const observer = new IntersectionObserver((entries) => {
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+    //cambiar tarjetas cada n segundos
 document.addEventListener('DOMContentLoaded', function() {
     const faqItems = document.querySelectorAll('.faq-item');
     let currentItem = 0;
@@ -39,11 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(showNextItem, 6000);
 });
 
+    //map location
 document.addEventListener('DOMContentLoaded', function() {
     const mapContainer = document.getElementById('map-container');
     const mapButtons = document.querySelectorAll('.map-button');
     
-    // Coordenadas de ejemplo (reemplazar con las coordenadas reales)
+    // Coordenadas iniciales
     const lat = 4.674748067144769;
     const lng = -74.0621140733782;
 
