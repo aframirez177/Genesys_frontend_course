@@ -72,10 +72,10 @@ nav a:hover {
 }
 
 .hero-content {
-    width: 650px;
+    width: 42vw;
     padding: 2rem;
     margin-left: 50px;
-    margin-top: 150px;
+    margin-top: 100px;
     animation: fadeIn 1s ease-out;
 }
 
@@ -88,7 +88,7 @@ h1 {
     font-family: var(--font-title);
     font-weight: 900;
     color: var(--text-color);
-    font-size: 55px;
+    font-size: 3.5vw;
     line-height: 1.2;
 }
 .green{
@@ -100,8 +100,10 @@ h1 {
 }
 
 .intro{
-    width: 450px;
-    margin-bottom: 50px;
+    width: 42vw;
+    margin-bottom: 20px;
+    font-size: 1.2vw;
+
 }
 /* Botones */
 .cta-button, .cta-button-1 {
@@ -118,7 +120,7 @@ h1 {
     background-color: var(--primary-color);
     color: white;
     border: none;
-    margin: 0 1rem;
+    margin: 2rem 0rem;
 }
 
 .cta-button-1 {
@@ -138,7 +140,7 @@ h1 {
     width: 500px;
     margin-left: 150px;
     font-family: var(--font-title);
-    font-size: 50px;
+    font-size: 4.5vw;
     text-align: left;
     padding: 0rem;
     line-height: 100%;
@@ -147,7 +149,7 @@ h1 {
     width: 600px;
     margin: 50px;
     font-family:var(--font-body);
-    font-size: 20px;
+    font-size: 1.6vw;
     text-align: right;
     padding: 2rem;
 }
@@ -174,7 +176,7 @@ h1 {
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 4rem 1rem;
+    margin: 4rem 1vw;
     hyphens: none;
     display: flex;
     flex-direction: column;
@@ -239,7 +241,7 @@ h1 {
 
 .step-card p{
     font-family: var(--font-body);
-    font-weight:300;
+    font-weight:500;
     margin-bottom: 10%;
     margin-top: 30px;
     padding: 0px;
@@ -247,6 +249,7 @@ h1 {
     text-align: center;
     transition: 0.2s; 
     width: 60%;   
+    font-size: 1vw;
     
 }
 .step-card:hover p{
@@ -275,7 +278,7 @@ h1 {
 
 /*servicios detalle*/
 .sst-services {
-    padding: 0rem 0%;
+    padding: 0rem 5vw;
     background-color: #f3f0f0;
 }
 
@@ -287,7 +290,7 @@ h1 {
 
 .service-card {
     background-color: white;
-    padding: 4rem;
+    padding: 2vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -298,7 +301,7 @@ h1 {
 }
 
 .service-card h3 {
-    font-size: 2.8rem;
+    font-size: 3vw;
     font-family: var(--font-title);
     font-weight: 800;
     margin-bottom: 1rem;
@@ -378,8 +381,8 @@ h1 {
     justify-content: flex-start;
     align-items: center;
     overflow-x: auto;
-    padding: 1rem 0;
-    margin: 20px 0 40px;
+    padding: 1.5rem 0;
+    margin: 2vw 0 40px;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -390,11 +393,12 @@ h1 {
 
 .client-card {
     flex: 0 0 auto;
-    width: 150px;
-    height: 150px;
+    width: 10vw;
+    height: 10vw;
     margin: 0 1rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     opacity: 0;
     transform: translateY(20px);
@@ -407,8 +411,11 @@ h1 {
 }
 
 .client-card img {
-    max-width: 100%;
-    max-height: 100%;
+    margin-top: 0;
+    align-items: center;
+    scale: 80%;
+    max-width: 6vw;
+    max-height: 80%;
     object-fit: contain;
     filter: grayscale(100%);
     transition: filter 0.3 ease;
@@ -423,23 +430,129 @@ h1 {
 
 }
 
+.client-card p {
+    font-size: 1.3vw;
+    margin-top: 10px;
+    font-weight: 800;
+    text-align: center;
+}
+
 /* Sección de beneficios */
-#beneficios ul {
-    list-style-type: none;
-    padding-left: 0;
+.beneficios {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    text-align: center;
+    height: 500px;
 }
 
-#beneficios li {
-    margin-bottom: 1rem;
-    padding-left: 30px;
+.beneficios h2 {
+    font-family: var(--font-title);
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 0;
+    margin-top: 01vw;
+}
+
+.faq-container {
+    width: 55%;
+    max-width: 1000px;
+    margin: 0 auto;
     position: relative;
+    height: 300px; /* Ajusta según sea necesario */
 }
 
-#beneficios li::before {
-    content: '✓';
+.faq-item {
     position: absolute;
+    top: 0;
     left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.faq-item.active {
+    opacity: 1;
+}
+
+.faq-content {
+    text-align: left;
+}
+
+.faq-item h3 {
+    font-family: var(--font-title);
+    font-size: 2vw;
     color: var(--primary-color);
+    margin-bottom: 0rem;
+}
+
+.faq-item p {
+    font-family: var(--font-body);
+    font-size: 1.16vw;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Seccion de ubicacion*/
+.location-section {
+    background-color: #f0f8f8;
+    padding: 40px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    margin: 5rem;
+}
+
+.location-section h2 {
+    color: #4fd1c5;
+    text-align: center;
+    font-family: var(--font-title);
+    font-weight: 800;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.map-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.map-button {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.map-button:hover {
+    background-color: #d0d0d0;
+}
+
+.map-button img {
+    width: auto;
+    height: 24px;
+}
+
+#map-container {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.location-section p{
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 700;
 }
 
 /* Sección de contacto */
