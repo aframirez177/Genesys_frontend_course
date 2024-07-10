@@ -41,29 +41,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const mapContainer = document.getElementById('map-container');
-    // ... (código existente)
+    const mapButtons = document.querySelectorAll('.map-button');
+    
+    // Coordenadas de ejemplo (reemplazar con las coordenadas reales)
+    const lat = 4.674748067144769;
+    const lng = -74.0621140733782;
 
     // Inicializar el mapa de Google
     let map = new google.maps.Map(mapContainer, {
-        center: { lat: 4.674748067144769,  lng: -74.0621140733782 },
+        center: { lat: lat, lng: lng },
         zoom: 12
     });
 
-    // Definir el icono personalizado
+  // Definir el icono personalizado
     const customMarker = {
-        url: 'assets/logo_negro_maps.png', // Reemplaza con la URL real de tu logo
-        scaledSize: new google.maps.Size(50, 50), // Ajusta el tamaño según necesites
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(25, 25) // Ajusta el punto de anclaje si es necesario
-    };
+    url: 'assets/logo_negro_maps.png', // Reemplaza con la URL real de tu logo
+    scaledSize: new google.maps.Size(50, 50), // Ajusta el tamaño según necesites
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(25, 25) // Ajusta el punto de anclaje si es necesario
+};
 
-    // Añadir marcador personalizado
-    new google.maps.Marker({
-        position: { lat: 4.674748067144769,  lng: -74.0621140733782 },
-        map: map,
-        icon: customMarker,
-        title: 'Nuestra ubicación'
-    });
+// Añadir marcador personalizado
+new google.maps.Marker({
+    position: { lat: 4.674748067144769, lng: -74.0621140733782 },
+    map: map,
+    icon: customMarker,
+    title: 'Nuestra ubicación'
+});
 
     // Función para abrir enlaces externos
     function openExternalMap(type) {
