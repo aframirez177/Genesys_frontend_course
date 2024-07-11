@@ -18,6 +18,7 @@ body {
     color: var(--text-color);
 }
 
+
 /* Contenedor de fondo */
 .background-container {
     background-image: url('assets/Foto_portada_landing_1.jpg');
@@ -281,26 +282,6 @@ cite {
     font-weight: bold;
 }
 
-/* Sección de contacto */
-#contact-form {
-    display: grid;
-    gap: 1rem;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-#contact-form input, #contact-form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid var(--secondary-color);
-    border-radius: 5px;
-    font-family: var(--font-body);
-}
-
-#contact-form textarea {
-    min-height: 150px;
-}
-
 /* Footer */
 footer {
     background-color: var(--text-color);
@@ -309,6 +290,14 @@ footer {
     padding: 1rem;
 }
 
+
+  /* Estilos adicionales para el contenido del popup */
+
+@media (max-width: 768px) {
+    .whatsapp-popup {
+    width: 250px;
+    }
+}
 /* Media queries para responsividad */
 @media (max-width: 768px) {
     header {

@@ -96,3 +96,53 @@ new google.maps.Marker({
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for footer links
+    document.querySelectorAll('.site-footer a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Add hover effect to certification images
+    const certificationImages = document.querySelectorAll('.certification-img');
+    certificationImages.forEach(img => {
+        img.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        img.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const whatsappButton = document.getElementById('whatsapp-button');
+    const whatsappPopup = document.getElementById('whatsapp-popup');
+    const closePopup = document.getElementById('close-popup');
+    const startChat = document.getElementById('start-chat');
+  
+    whatsappButton.addEventListener('click', function() {
+      whatsappPopup.style.display = 'block';
+      setTimeout(() => {
+        whatsappPopup.classList.add('show');
+      }, 10);
+    });
+  
+    closePopup.addEventListener('click', function() {
+      whatsappPopup.classList.remove('show');
+      setTimeout(() => {
+        whatsappPopup.style.display = 'none';
+      }, 300);
+    });
+  
+    startChat.addEventListener('click', function() {
+      // Reemplaza este número con tu número de WhatsApp real
+      window.open('https://wa.me/573205803048', '_blank');
+    });
+  });
