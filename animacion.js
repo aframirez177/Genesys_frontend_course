@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializar el mapa de Google
     let map = new google.maps.Map(mapContainer, {
         center: { lat: lat, lng: lng },
-        zoom: 12
+        zoom: 14
     });
 
   // Definir el icono personalizado
@@ -126,23 +126,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const whatsappPopup = document.getElementById('whatsapp-popup');
     const closePopup = document.getElementById('close-popup');
     const startChat = document.getElementById('start-chat');
-  
+
     whatsappButton.addEventListener('click', function() {
-      whatsappPopup.style.display = 'block';
-      setTimeout(() => {
+    whatsappPopup.style.display = 'block';
+    setTimeout(() => {
         whatsappPopup.classList.add('show');
-      }, 10);
+    }, 10);
     });
-  
+
     closePopup.addEventListener('click', function() {
-      whatsappPopup.classList.remove('show');
-      setTimeout(() => {
+    whatsappPopup.classList.remove('show');
+    setTimeout(() => {
         whatsappPopup.style.display = 'none';
-      }, 300);
+    }, 300);
     });
-  
+
     startChat.addEventListener('click', function() {
       // Reemplaza este número con tu número de WhatsApp real
-      window.open('https://wa.me/573205803048', '_blank');
+    window.open('https://wa.me/573205803048', '_blank');
     });
-  });
+});

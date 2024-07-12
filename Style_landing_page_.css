@@ -16,8 +16,20 @@ body {
     padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
+    line-height: 1.6;
 }
 
+/* Mejoras en la tipografía */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
+    line-height: 1.2;
+}
+
+/* Optimización de imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /* Contenedor de fondo */
 .background-container {
@@ -113,23 +125,33 @@ nav a:hover {
     display: flex;
     align-items: center;
     padding: 1rem 5%;
-    width: 540px;
+    width: 80vw;
 }
 
 .hero-content {
-    max-width: 650px;
+    max-width: 48vw;
     padding: 2rem;
     border-radius: 10px;
     animation: fadeIn 1s ease-out;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.5s ease-out;
 }
 
 h1 {
-    font-family: var(--font-title);
+
     font-weight: 900;
     color: var(--text-color);
     font-size: 3rem;
@@ -139,6 +161,14 @@ h1 {
 
 .green {
     color: var(--primary-color);
+}
+.highlight{
+    font-weight: 700;
+}
+
+a:focus, button:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 .hero p {
@@ -158,11 +188,141 @@ h2 {
     text-align: center;
 }
 
+
+/* Sección de servicios */
+.section-servicios{
+    
+    padding-top: 0;
+    align-content: center;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    scale: 80%;
+    height:min-content;
+    margin-top: -100px;
+    margin-bottom: -100px;
+}
+
+.service-description{
+    margin-top: -60px;
+    padding: 0%;
+    align-content: center;
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+    margin-left: 120px;    
+}
+.service-bennefits {
+    margin-left: 500px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    padding-top: -50px;
+    margin-top: -20px;
+    line-height: 100%;
+    font-size: 30px;
+}
+
+.nuestros-examenes{
+    text-align: center;
+    width: 60vw;
+    padding: 0%;
+    margin-top: 0;
+    margin-left: 15vw;
+    font-family: var(--font-title);
+    font-size: 20px;
+}
+.service-bennefit{
+    padding: 0;
+    align-items: center;
+    text-align: center;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    gap:4rem;
+    margin-top: -190px;
+    padding-bottom: 10px;
+    scale: 80%;
+}
+.steps p{
+    font-weight: 900;
+    margin-left: 60px;
+    align-items: center;
+    text-align: left;
+    width: 600px;
+    font-size: 2.5vw;
+    line-height: 100%;
+    border: solid, 6px;
+    border-color: var(--primary-color);
+    padding: 50px;
+    border-radius: 50px;
+    margin-bottom: 0;
+    
+}
+
+.step-card {
+    background-color:#F0F0F0;
+    padding: 0rem 1rem;
+    text-align: left;
+    margin-top: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.step-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.step-card li {
+    font-size: 18px;
+    hyphens: none;
+    line-height: 150%;
+    font-weight: 600;
+}
+
+.calculadora-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.cta-button-calculadora {
+    font-family: var(--font-title);
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 38px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-top: -60px;
+    margin-bottom: 50px;
+}
+
 /* Sección de clientes */
 .section-clientes {
     background-color: white;
     padding: 2rem 5%;
     overflow: hidden;
+}
+
+.section-clientes h2{
+    text-align: center;
+    font-family: var(--font-title);
+    font-weight: 800;
+    font-size: 4rem;
+    margin: 0;
 }
 
 .section-clientes p {
@@ -171,6 +331,7 @@ h2 {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 2rem;
+    margin: 0;
 }
 
 .clients {
@@ -178,8 +339,8 @@ h2 {
     justify-content: flex-start;
     align-items: center;
     overflow-x: auto;
-    padding: 1rem 0;
-    margin: 20px 0 40px;
+    padding: 1.5rem 0;
+    margin: 2vw 0 40px;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -190,22 +351,34 @@ h2 {
 
 .client-card {
     flex: 0 0 auto;
-    width: 150px;
-    height: 150px;
+    width: 10vw;
+    height: 10vw;
     margin: 0 1rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.client-card.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .client-card img {
-    max-width: 100%;
-    max-height: 100%;
+    margin-top: 0;
+    align-items: center;
+    scale: 80%;
+    max-width: 6vw;
+    max-height: 80%;
     object-fit: contain;
     filter: grayscale(100%);
-    transition: filter 0.3s ease;;
+    transition: filter 0.3 ease;
 }
+
 
 .client-card:hover img{
     filter: grayscale(1%);
@@ -215,31 +388,11 @@ h2 {
 
 }
 
-/* Sección de servicios */
-.steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.step-card {
-    background-color: rgb(233, 228, 220);
-    border-radius: 12px;
-    padding: 1.5rem;
-    text-align: left;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.step-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.step-card h3 {
-    font-family: var(--font-title);
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+.client-card p {
+    font-size: 1.3vw;
+    margin-top: 10px;
+    font-weight: 800;
+    text-align: center;
 }
 
 /* Sección de beneficios */
@@ -282,12 +435,286 @@ cite {
     font-weight: bold;
 }
 
-/* Footer */
-footer {
-    background-color: var(--text-color);
-    color: white;
+/* Seccion de ubicacion*/
+.location-section {
+    background-color: #f0f8f8;
+    padding: 40px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    margin: 5rem;
+}
+
+.location-section h2 {
+    color: #4fd1c5;
     text-align: center;
-    padding: 1rem;
+    font-family: var(--font-title);
+    font-weight: 800;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.map-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.map-button {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.map-button:hover {
+    background-color: #d0d0d0;
+}
+
+.map-button img {
+    width: auto;
+    height: 24px;
+}
+
+#map-container {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.location-section p{
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+/*footer*/
+
+.site-footer {
+    background-color: #232931;
+    color: #f3f0f0;
+    padding: 1rem 2%;
+    font-family: var(--font-body);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:2rem;
+}
+
+.footer-section .services{
+
+}
+.footer-content a{
+    font-size: 19px;
+}
+.footer-content p{
+    font-size: 13px;
+}
+.footer-content h4{
+    font-size: 13px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--primary-color);
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #f3f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-color);
+}
+
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 1rem;
+}
+
+.certification-img {
+    width: 110%;
+    height: auto;
+    margin: 3px;
+    object-fit: scale-down;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.9rem;
+    color: #d0d0d0;
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo {
+    height: 80px;
+    width: auto;
+}
+
+.footer-bottom a{
+    font-weight: 800;
+    color:var(--alternative-color);
+}
+
+/*whatsap boton*/
+.whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 93px;
+    height: 93px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: .5s;
+}
+.whatsapp-button:hover{
+    transform: scale(1.16);
+}
+
+.whatsapp-button img {
+    width: 55px;
+    height: 55px;
+}
+
+.whatsapp-popup {
+    display: none;
+    position: fixed;
+    bottom: 140px;
+    right: 50px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
+
+.popup-header {
+    background-color: #075E54;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.advisor-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.advisor-info {
+    flex-grow: 1;
+}
+
+.advisor-info h3, .advisor-info p {
+    margin: 0;
+}
+
+#close-popup {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.popup-content {
+    padding: 15px;
+}
+
+.start-chat-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+.start-chat-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-button {
+width: 50px;
+height: 50px;
+    }
+    
+    .whatsapp-icon {
+    width: 30px;
+    height: 30px;
+    }
+    
+    .whatsapp-popup {
+    width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        width: 100%;
+    }
 }
 
 
