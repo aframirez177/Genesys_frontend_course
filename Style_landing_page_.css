@@ -8,6 +8,11 @@
     --font-title: "Poppins", sans-serif;
     --font-body: "Raleway", sans-serif;
 }
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
 
 /* Estilos generales */
 body {
@@ -200,12 +205,12 @@ h2 {
     padding: 0;
     scale: 80%;
     height:min-content;
-    margin-top: -100px;
-    margin-bottom: -100px;
+    margin-top: -120px;
+    margin-bottom: -150px;
 }
 
 .service-description{
-    margin-top: -60px;
+    margin-top: 0px;
     padding: 0%;
     align-content: center;
     width: 60vw;
@@ -213,30 +218,15 @@ h2 {
     align-items: center;
     margin-left: 120px;    
 }
-.service-bennefits {
+.service-bennefit {
     margin-left: 500px;
     text-align: center;
     align-content: center;
     align-items: center;
     padding-top: -50px;
-    margin-top: -20px;
+    margin-top: 0px;
     line-height: 100%;
     font-size: 30px;
-}
-
-.nuestros-examenes{
-    text-align: center;
-    width: 60vw;
-    padding: 0%;
-    margin-top: 0;
-    margin-left: 15vw;
-    font-family: var(--font-title);
-    font-size: 20px;
-}
-.service-bennefit{
-    padding: 0;
-    align-items: center;
-    text-align: center;
 }
 
 .steps {
@@ -249,27 +239,35 @@ h2 {
 }
 .steps p{
     font-weight: 900;
-    margin-left: 60px;
     align-items: center;
     text-align: left;
-    width: 600px;
-    font-size: 2.5vw;
+    width: 59vw;
+    font-size: 3.6vw;
     line-height: 100%;
     border: solid, 6px;
     border-color: var(--primary-color);
-    padding: 50px;
+    padding: 25px;
     border-radius: 50px;
-    margin-bottom: 0;
+    margin-bottom: 160px;
+    margin-top: -130px;
     
 }
 
 .step-card {
-    background-color:#F0F0F0;
-    padding: 0rem 1rem;
+    background-color:#FFF2FE;
+    padding: 3rem;
     text-align: left;
     margin-top: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50px;
+    border: solid, 8px;
+    border-color: var(--background-color);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.step-card:nth-child(2),
+.step-card:nth-child(3){
+    height: 280px;
 }
 
 .step-card:hover {
@@ -289,12 +287,13 @@ h2 {
     font-weight: 600;
 }
 
-.calculadora-container{
+.calculadora-button-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin-top: -80px;
     padding: 0;
+    margin-bottom: 40px;
 }
 
 .cta-button-calculadora {
@@ -306,8 +305,9 @@ h2 {
     padding: 20px;
     border-radius: 38px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    margin-top: -60px;
-    margin-bottom: 50px;
+    margin-top: -120px;
+    margin-bottom: 80px;
+    margin-left: 22%;
 }
 
 /* Sección de clientes */
@@ -511,9 +511,7 @@ cite {
     gap:2rem;
 }
 
-.footer-section .services{
 
-}
 .footer-content a{
     font-size: 19px;
 }
@@ -550,6 +548,7 @@ cite {
     color: #f3f0f0;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-size: 12px;
 }
 
 .footer-section ul li a:hover {
