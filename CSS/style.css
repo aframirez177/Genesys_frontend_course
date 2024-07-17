@@ -1,10 +1,16 @@
 /* Definición de variables*/
 :root {
     --primary-color: #93DDC2;
-    --secondary-color: #393e46;
-    --text-color: #232931;
+    --secondary-color: #383d47;
+    --text-color: #2d3238;
     --background-color:#f3f0f0;
-    --alternative-color:#FCF4AB;
+    --alternative-color:#fff27d;
+    --aux-color-1:#bcddf3;
+    --aux-color-2:#fcd5f9;
+    --aux-color-3:#FCF4AB;
+    --aux-color-4:#b2f7ff;
+    --aux-color-5:#bcffe8;
+    --aux-color-6:#fae2ba;
     --font-title: "Poppins", sans-serif;
     --font-body: "Raleway", sans-serif;
 }
@@ -25,7 +31,7 @@ body {
 
 /* Contenedor de fondo */
 .background-container {
-background-image: url('assets/Foto_portada_editada.png');
+background-image: url('../assets/Foto_portada_editada.png');
 background-size: cover;
 background-position: center;
 background-attachment: fixed;
@@ -90,6 +96,7 @@ nav a:hover {
 }
 
 h1 {
+    margin-top: 120px;
     font-family: var(--font-title);
     font-weight: 900;
     color: var(--text-color);
@@ -105,9 +112,10 @@ h1 {
 }
 
 .intro{
-    width: 42vw;
-    margin-bottom: 20px;
+    width: 40vw;
+    margin: 20px 0;
     font-size: 1.2vw;
+    font-weight: 500;
 
 }
 /* Botones */
@@ -115,7 +123,7 @@ h1 {
     padding: 0.5rem 1.61rem;
     border-radius: 18px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     font-family: var(--font-body);
     transition: 0.2s;
@@ -123,9 +131,10 @@ h1 {
 
 .cta-button {
     background-color: var(--primary-color);
-    color: white;
+    color: rgb(255, 242, 242);
     border: none;
     margin: 2rem 0rem;
+    margin-top: 0;
 }
 
 .cta-button-1 {
@@ -249,14 +258,14 @@ h1 {
     position: absolute;
     font-family: var(--font-body);
     font-weight:500;
-    margin-bottom: 0;
-    margin-top: -20px;
     padding: 0px;
     height:max-content;
     text-align: center;
     transition: 0.2s; 
     width: 60%;   
     font-size: 0.9vw;
+    top: 40%;
+    transform: translateY(-50%);
     
 }
 .step-card:hover p{

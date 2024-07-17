@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const mapButtons = document.querySelectorAll('.map-button');
     
     // Coordenadas iniciales
-    const lat = 4.674748067144769;
-    const lng = -74.0621140733782;
+    const lat = 4.6747451365260595;
+    const lng = -74.06211526147553;
 
     // Inicializar el mapa de Google
     let map = new google.maps.Map(mapContainer, {
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Añadir marcador personalizado
 new google.maps.Marker({
-    position: { lat: 4.674748067144769, lng: -74.0621140733782 },
+    position: {  lat: 4.6747451365260595, lng: -74.06211526147553 },
     map: map,
     icon: customMarker,
     title: 'Nuestra ubicación'
@@ -146,3 +146,15 @@ document.addEventListener('DOMContentLoaded', function() {
     window.open('https://wa.me/573205803048', '_blank');
     });
 });
+
+
+console.log('hola mundo este es un mensaje secreto que no se puede ver');
+
+
+
+
+
+
+
+
+
