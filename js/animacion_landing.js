@@ -56,7 +56,7 @@
     
       // Definir el icono personalizado
         const customMarker = {
-        url: '../assets/logo_negro_maps.png', // Reemplaza con la URL real de tu logo
+        url: './assets/logo_negro_maps.png', // Reemplaza con la URL real de tu logo
         scaledSize: new google.maps.Size(50, 50), // Ajusta el tamaño según necesites
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(25, 25) // Ajusta el punto de anclaje si es necesario
