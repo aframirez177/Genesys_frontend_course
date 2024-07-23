@@ -1,0 +1,43 @@
+.logo {
+    width: 180px;
+    height: auto;
+    margin: 10px 0px;
+    transition: 0.2s;
+}
+
+.logo:hover{
+    width: 190px;
+    height: auto;
+    margin: 10px 0px;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    gap: 4rem;
+}
+
+nav a {
+    font-family: var(--font-body);
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: 0.2s;
+    position: relative;
+    margin: 0, 5rem;
+    left: -5vw;
+}
+
+nav a:hover {
+    font-weight: 800;
+}
+
+.steps {
+    margin-left: 5vw;
+}
+.calculator-form{
+margin-left: 50px;
+}
+.calculator-header{
+    margin-left: 20vw;
+}

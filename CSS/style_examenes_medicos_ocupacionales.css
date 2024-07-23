@@ -1,6 +1,7 @@
 /*rem units setings queda 1=10px*/
-/*html{
+html{
     font-size: 62.5%;
+    color: #393e46;
 }
 
 /* Definición de variables */
@@ -19,7 +20,6 @@
     box-sizing: border-box;
 }
 
-/* Estilos generales */
 body {
     font-family: var(--font-body);
     margin: 0;
@@ -48,17 +48,18 @@ img {
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
+    
 }
-
 /* Encabezado */
 header {
     background-color: transparent;
     position: absolute;
-    width: 70%;
-    margin: 29px 69px;
-    padding: 0 50px;
+    width: 100%;
+    margin: 0;
+    padding: 5vh ;
     display: flex;
     justify-content: space-between;
+    min-width: 320px;
     align-items: center;
     z-index: 10;
     transition: background-color 0.3s ease;
@@ -68,9 +69,9 @@ header a:focus{
 }
 
 .logo {
-    width: 180px;
+    width: 120px;
     height: auto;
-    margin: 10px 0px;
+    margin: 0px 0px;
     transition: 0.2s;
 }
 
@@ -81,11 +82,78 @@ header a:focus{
 }
 
 /* Navegación */
-nav {
-    display: flex;
-    gap: 2rem;
-}
 
+.off-screen-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #93ddc2ed;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 150px;
+    right: -150px;
+    padding-top: 100px;
+    justify-self: right;
+    align-items:center;
+    transition: .3s ease;
+    border-radius: 16px;
+    box-shadow: 0 10px 16px #3d434c7f ;
+    z-index: 6;
+}
+.off-screen-menu.active{
+    right: -10px;
+    display: flex;
+}
+@media (min-width: 721px) {
+    .off-screen-menu {
+        display: none; /* Oculta el menú hamburguesa en pantallas mayores a 720px */
+    }
+}
+.ham-menu{
+    height: 38px;
+    width: 45px;
+    margin-left: auto;
+    position: relative;
+    top: -7px;
+    right: 0px;
+    z-index: 11;
+}
+.ham-menu span{
+    display: block;
+    margin: 1px;
+    height: 4px;
+    width: 30px;
+    background-color: #393e46;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.ham-menu span:nth-child(1){
+    top: 25%;
+}
+.ham-menu span:nth-child(3){
+    top: 75%
+}
+.ham-menu.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2){
+    opacity: 0%;
+}
+.ham-menu.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+@media (min-width: 721px) {
+    .ham-menu {
+        display: none; /* Oculta el menú hamburguesa en pantallas mayores a 720px */
+    }
+}
 nav a {
     font-family: var(--font-body);
     font-size: 14px;
@@ -98,7 +166,13 @@ nav a {
 nav a:hover {
     font-weight: 800;
 }
-
+/*este es el screen para tablet*/
+@media (max-width: 721px) {
+    .screen-menu {
+        display: none; /* Muestra el menú normal en pantallas mayores a 720px */
+        /* Aquí puedes agregar más estilos para el menú normal */
+    }
+}
 /* Botones */
 .cta-button, .cta-button-1 {
     padding: 0.5rem 1.61rem;
@@ -116,7 +190,7 @@ nav a:hover {
     background-color: var(--primary-color);
     color: white;
     border: none;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .cta-button-1 {
@@ -132,15 +206,15 @@ nav a:hover {
 
 /* Sección héroe */
 .hero {
-    height: 700px;
+    height: 100vh;
     display: flex;
     align-items: center;
     padding: 1rem 5%;
-    width: 80vw;
+    width: 100%;
 }
 
 .hero-content {
-    max-width: 48vw;
+    max-width: 70vw;
     padding: 2rem;
     border-radius: 10px;
     animation: fadeIn 1s ease-out;
@@ -160,7 +234,6 @@ nav a:hover {
 .fade-in-up {
     animation: fadeInUp 0.5s ease-out;
 }
-
 h1 {
 
     font-weight: 900;
@@ -168,6 +241,7 @@ h1 {
     font-size: 3rem;
     line-height: 1.2;
     margin-bottom: 1rem;
+    max-width: 600px;
 }
 
 .green {
@@ -186,83 +260,56 @@ a:focus, button:focus {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     font-weight: 500;
+    max-width: 400px;
 }
-
-/* Secciones generales */
-section {
-    padding: 4rem 5%;
-}
-
-h2 {
-    font-family: var(--font-title);
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
 
 /* Sección de servicios */
-.section-servicios{
-    
-    padding-top: 0;
-    align-content: center;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    scale: 80%;
-    height:min-content;
-    margin-top: -120px;
-    margin-bottom: -150px;
+.section-servicios {
+    display: block;
+    position: relative;
+    padding:  10px;
+    background-image: url('../assets/patron_fondo.png');
+    background-size:auto;
+    background-position: left;
+    background-attachment:local;
+    min-height: 70vh;
+    padding-bottom: 120px;
 }
 
-.service-description{
-    margin-top: 0px;
-    padding: 0%;
-    align-content: center;
-    width: 60vw;
-    justify-content: center;
-    align-items: center;
-    margin-left: 120px;    
+.service-description {
+    width: 80vw;
+    top: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
 }
-.service-bennefit {
-    margin-left: 500px;
-    text-align: center;
+.service-bennefit h2 {
+    text-align: left;
     align-content: center;
     align-items: center;
-    padding-top: -50px;
+    padding-top: 0;
     margin-top: 0px;
     line-height: 100%;
-    font-size: 30px;
+    font-size: 2.6rem;
+    
 }
 
 .steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-    gap:4rem;
-    margin-top: -190px;
-    padding-bottom: 10px;
-    scale: 80%;
+    align-items:center;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 4fr));
+    gap:1rem;
+    width: 90%;
+    
 }
 .steps p{
-    font-weight: 900;
-    align-items: center;
-    text-align: left;
-    width: 59vw;
-    font-size: 3.6vw;
-    line-height: 100%;
-    border: solid, 6px;
-    border-color: var(--primary-color);
-    padding: 25px;
-    border-radius: 50px;
-    margin-bottom: 160px;
-    margin-top: -130px;
-    
+    display: none;
 }
 
 .step-card {
     background-color:#FFF2FE;
-    padding: 3rem;
+    padding: 2rem;
     text-align: left;
     margin-top: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -270,11 +317,16 @@ h2 {
     border: solid, 8px;
     border-color: var(--background-color);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+    width: fit-content;
+    scale: 90%;
+    align-self: baseline;
 }
 
-.step-card:nth-child(2),
-.step-card:nth-child(3){
-    height: 280px;
+@media (min-width:520px) {
+    .steps .step-card:nth-child(4){
+        top: -120px;
+    }   
 }
 
 .step-card:hover {
@@ -289,7 +341,7 @@ h2 {
 }
 
 .step-card li {
-    font-size: 18px;
+    font-size: 1.1rem;
     hyphens: none;
     line-height: 150%;
     font-weight: 600;
@@ -299,12 +351,13 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -80px;
     padding: 0;
-    margin-bottom: 40px;
+    align-self: center;
+    justify-self: center;
 }
 
 .cta-button-calculadora {
+    position: absolute;
     font-family: var(--font-title);
     font-weight: 700;
     color: var(--text-color);
@@ -313,164 +366,246 @@ h2 {
     padding: 20px;
     border-radius: 38px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    margin-top: -120px;
-    margin-bottom: 80px;
-    margin-left: 22%;
+    margin-top: 240px;
+    margin-bottom: 0;
+    
 }
-
-/* Estilos para la sección del cotizador */
-   /* Estilos de la calculadora */
-.calculator {
-    background-color:var(--primary-color);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 0 20vw;
-    margin-top: 2rem;
+/*Aca inicia la parte de la calculadora*/
+.container{
+    background-color: #EEF7FD;
+    margin-top: -100px;
 }
-
-.calculator-header {
-    text-align: left;
-    margin-bottom: 2rem;
-    width: 60%;
-}
-.calculator-header h1{
-    line-height: 100%;
-} 
-
-.calculator-body {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.calculator-form {
-    flex: 1 1 60%;
-}
-
-.calculator-summary {
-    flex: 1 1 30%;
-}
-
-/* Estilos de los inputs */
-.input-group {
-    margin-bottom: 1rem;
-}
-
-
-.input-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-.input-group input[type="text"],
-.input-group input[type="number"],
-.input-group select {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-/* Estilos de los checkboxes */
-.checkbox-group {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-    gap: 1.5rem;
-}
-
-.checkbox-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    scale: 200%;
-    font-size: .5rem;
-}
-
-.checkbox-item input[type="checkbox"] {
-    margin-right: 0rem;
-}
-
-/* Estilos de los botones */
-.btn {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #7bc1a8;
-}
-
-.btn-add {
-    background-color: #4CAF50;
-}
-
-.btn-add:hover {
-    background-color: #45a049;
-}
-
-/* Estilos del resumen */
-.exam-description {
-    background-color: #f9f9f9;
-    border-radius: 4px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-.exam-description h3 {
-    margin-top: 0;
-}
-
-.price {
-    font-weight: bold;
+.calculator-header{
+    margin: 20px;
+    margin-left: 15vw;
+    padding-top: 50px;
+    max-width: 500px;
     color: var(--primary-color);
 }
-
-.discount-options {
-    margin-top: 1rem;
+.calculator-header h1{
+    margin-top: 100px;
+    color: var(--primary-color);
 }
+.calculator-form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-left: 17px;
+    padding: 10px;
+    align-self: center;
+    
+}
+.container-input-group{
+    justify-content: center;
+    align-self:baseline;
+    align-content: center;
+}
+.input-group input{
+    align-self: center;
+    border: none;
+    border-radius: 30px;
+    padding: 1rem;
+    text-align: center;
+    width: 24rem;
+    margin: 2rem;
+}
+.calculator-summary{
+    align-self: baseline;
+    border: none;
+    border-radius: 30px;
+    padding: 0rem;
+    text-align: center;
+    max-width: 350px;
+    margin: 2rem;
+    padding: 0rem;
+}
+.checkbox-group{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 3px;
+    grid-auto-rows: minmax(50px, auto);
+    height: auto;
+    margin: 20px;
+} 
+.checkbox-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height:fit-content;
+    align-items: center;
+    justify-content: center;
+    scale: 200%;
+}
+.checkbox-item label{
+    font-size: .5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+.input-group-cantidad-trabajdores{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.input-group-cantidad-trabajdores label{
+    font-family: var(--font-title);
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-left: 0px;
 
-.discount-option {
+}
+.input-group-cantidad-trabajdores input{
+    border: none;
+    border-radius: 30px;
+    width: 50px;
+    padding: 10px;
+    justify-self: end;
+    margin-left: 5px;
+    top: -20px;
+    text-align: center;
+    
+}
+.container-btn-add{
     display: flex;
     align-items: center;
-    margin-bottom: 0.5rem;
+    align-content: center;
+    
+}
+.btn-add{
+    background-color: transparent;
+    font-family: var(--font-title);
+    color: var(--secondary-color);
+    font-weight: 800;
+    font-size: 1.6rem;
+    border: none;
+    align-self: center;
+    margin-top: 30px;
+    margin-left: 10px ;
+    transition: .3s ease;
+}
+.btn-add:hover{
+    color: var(--primary-color);
+    transform: scale(120%);
 }
 
-.discount-option input[type="checkbox"] {
-    margin-right: 0.5rem;
+.exam-description h3{
+    font-family: var(--font-title);
+    text-align: left;
+    font-weight: 800;
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+.exam-description p{
+    font-family: var(--font-title);
+    text-align: left;
+    font-weight: 500;
+    color:var(--secondary-color);
+    font-size: 1.2rem;
+}
+.exam-price{
+    align-items: end;
+    align-self: flex-end;
+    align-content:end;
+    justify-content: right;
+}
+.exam-price p{
+    text-align: right;
+    justify-content: right;
+    align-items: end;
+    align-self: flex-end;
+    margin-left: 00px;
+}
+.min-price{
+    text-align: right;
+    font-family: var(--font-title);
+    font-weight: 800;
+    font-size: 3.5rem;
+}
+.package-summary{
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-self: center;
+    align-items: center;
+    justify-content: right;
+}
+.package-name{
+    justify-content: end;
+    align-self: flex-end;
+    
+    margin: 10px;
+}
+.package-value{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: end;
+    align-content: end;
+    justify-content: right;
+}
+.package-value p{
+    font-family: var(--font-title);
+    text-align: right;
+}
+.price{
+    color: var(--primary-color);
+    font-family: var(--font-title);
+    font-weight: 700;
+    text-align: right;
+}
+.your-price{
+    color: var(--primary-color);
+    font-family: var(--font-title);
+    font-weight: 700;
+    text-align: right;
+    font-size: 3.2rem;
+    line-height: 120%;
+    margin-top: -20px;
+}
+.line{
+    display: block;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: .5rem;
+    border-radius: 20px;
+    margin: 1rem;
+}
+.discount-option{
+    text-align: right;
+}
+#discount1, #discount2{
+    scale: 200%;
+    margin: 1rem;
+}
+.total{
+    display: flex;
+}
+.total-price{
+    font-family: var(--font-title);
+    font-size: 3rem;
+    font-weight: 800;
+    color: #393e46;
 }
 
-.total {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-top: 1rem;
-    text-align: center;
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    .calculator-body {
-        flex-direction: column;
-        padding: 0, 3rem
-    }
-
-    .calculator-form,
-    .calculator-summary {
-        flex: 1 1 100%;
-    }
+.btn{
+    font-family: var(--font-title);
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 38px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 65px;
+    margin-bottom: 0;
+    border: none;
 }
 /* Sección de clientes */
 .section-clientes {
     background-color: white;
-    padding: 2rem 5%;
     overflow: hidden;
 }
 
@@ -496,8 +631,8 @@ h2 {
     justify-content: flex-start;
     align-items: center;
     overflow-x: auto;
-    padding: 1.5rem 0;
-    margin: 2vw 0 40px;
+    padding: 4.5rem 0;
+    margin: 3rem 0 40px;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -508,12 +643,12 @@ h2 {
 
 .client-card {
     flex: 0 0 auto;
-    width: 10vw;
-    height: 10vw;
+    width: 7rem;
+    height: 7rem;
     margin: 0 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content:end;
     align-items: center;
     opacity: 0;
     transform: translateY(20px);
@@ -529,8 +664,8 @@ h2 {
     margin-top: 0;
     align-items: center;
     scale: 80%;
-    max-width: 6vw;
-    max-height: 80%;
+    max-width: 7rem;
+    max-height: 100%;
     object-fit: contain;
     filter: grayscale(100%);
     transition: filter 0.3 ease;
@@ -546,33 +681,28 @@ h2 {
 }
 
 .client-card p {
-    font-size: 1.3vw;
+    font-size: 1rem;
     margin-top: 10px;
     font-weight: 800;
     text-align: center;
 }
-
 /* Sección de beneficios */
-#beneficios ul {
-    list-style-type: none;
-    padding-left: 0;
+.beneficios {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    text-align: center;
+    height: 500px;
 }
 
-#beneficios li {
-    margin-bottom: 1rem;
-    padding-left: 30px;
-    position: relative;
+.beneficios h2 {
+    font-family: var(--font-title);
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 0;
+    margin-top: 01vw;
 }
-
-#beneficios li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-}
-
 /* Sección de testimonios */
-#testimonios {
+.testimonios {
     background-color: var(--secondary-color);
     color: white;
 }
@@ -591,14 +721,18 @@ cite {
     font-style: normal;
     font-weight: bold;
 }
-
 /* Seccion de ubicacion*/
 .location-section {
+    display: flex;
+    flex-direction: column;
     background-color: #f0f8f8;
-    padding: 40px 20px;
+    padding: 40px 0px;
     border: 2px solid #e0e0e0;
     border-radius: 10px;
-    margin: 5rem;
+    margin:0, 5rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 .location-section h2 {
@@ -611,10 +745,16 @@ cite {
 }
 
 .map-controls {
+    position: relative;
     display: flex;
+    align-self: center;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    align-content: center;
+    gap: 8px;
+    margin: 10px;
+    max-width: 400px;
+    align-items: center;
+    align-self: center;
 }
 
 .map-button {
@@ -626,6 +766,7 @@ cite {
     align-items: center;
     gap: 10px;
     cursor: pointer;
+    align-self: center;
     transition: background-color 0.3s;
 }
 
@@ -635,7 +776,7 @@ cite {
 
 .map-button img {
     width: auto;
-    height: 24px;
+    height: auto;
 }
 
 #map-container {
@@ -650,14 +791,12 @@ cite {
     text-align: center;
     font-weight: 700;
 }
-
-
 /*footer*/
 
 .site-footer {
     background-color: #232931;
     color: #f3f0f0;
-    padding: 1rem 2%;
+    padding: 3rem 1rem;
     font-family: var(--font-body);
 }
 
@@ -665,12 +804,11 @@ cite {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap:2rem;
+    gap: 0rem;
 }
 
-
 .footer-content a{
-    font-size: 19px;
+    font-size: 13px;
 }
 .footer-content p{
     font-size: 13px;
@@ -682,7 +820,7 @@ cite {
 .footer-section {
     flex: 1;
     min-width: 200px;
-    margin: 2rem;
+    margin: 1rem;
 }
 
 .footer-section h3 {
@@ -705,7 +843,6 @@ cite {
     color: #f3f0f0;
     text-decoration: none;
     transition: color 0.3s ease;
-    font-size: 12px;
 }
 
 .footer-section ul li a:hover {
@@ -715,7 +852,10 @@ cite {
 .certification-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-    gap: 1rem;
+    gap: 2rem;
+    margin: 5px;
+    justify-content: baseline;
+    margin: 20px;
 }
 
 .certification-img {
@@ -736,6 +876,7 @@ cite {
 
 .footer-logos {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 2rem;
@@ -743,7 +884,7 @@ cite {
 }
 
 .footer-logo {
-    height: 80px;
+    height: 60px;
     width: auto;
 }
 
@@ -870,88 +1011,5 @@ height: 50px;
 
     .footer-section {
         width: 100%;
-    }
-}
-
-
-  /* Estilos adicionales para el contenido del popup */
-
-@media (max-width: 768px) {
-    .whatsapp-popup {
-    width: 250px;
-    }
-}
-/* Media queries para responsividad */
-@media (max-width: 768px) {
-    header {
-        width: 90%;
-        margin: 20px 5%;
-        padding: 0 20px;
-        flex-direction: column;
-    }
-
-    nav {
-        margin-top: 1rem;
-    }
-
-    .hero {
-        height: auto;
-        padding: 6rem 5% 3rem;
-        width: 100%;
-    }
-
-    .hero-content {
-        padding: 1rem;
-    }
-
-    .hero h1 {
-        font-size: 200px;
-    }
-
-    .steps {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Mejoras de accesibilidad */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
-/* Estilos de enfoque para accesibilidad */
-a:focus, button:focus, input:focus, textarea:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-}
-
-/* Estilos de impresión */
-@media print {
-    .background-container {
-        background-image: none;
-    }
-
-    .cta-button, nav, #contact-form {
-        display: none;
-    }
-
-    body {
-        font-size: 12pt;
-        line-height: 1.5;
-    }
-
-    h1, h2 {
-        page-break-after: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
     }
 }
