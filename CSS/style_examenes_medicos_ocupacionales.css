@@ -638,8 +638,8 @@ a:focus, button:focus {
 
 .client-card {
     flex: 0 0 auto;
-    width: 7rem;
-    height: 7rem;
+    width: 10rem;
+    height: 10rem;
     margin: 0 1rem;
     display: flex;
     flex-direction: column;
@@ -658,8 +658,8 @@ a:focus, button:focus {
 .client-card img {
     margin-top: 0;
     align-items: center;
-    scale: 80%;
-    max-width: 7rem;
+    scale: 90%;
+    max-width: 10rem;
     max-height: 100%;
     object-fit: contain;
     filter: grayscale(100%);
