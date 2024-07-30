@@ -1,4 +1,4 @@
 [ZoneTransfer]
 ZoneId=3
-ReferrerUrl=https://www.xconvert.com/
-HostUrl=https://ncf-ec2-east-32-hv.xconvert.com/v1/edge/downloads/GHdvtqh7C2i-z-0-y-66a974e80ce7a76a578c4ad7.webp?uuid=4796d734-a017-e950-59d0-c03ebf2a64b8
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://eu-central.storage.cloudconvert.com/tasks/7c797495-77b8-4c47-8e9a-175ed02d33a1/Foto_portada_landing_1.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20240730%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20240730T232819Z&X-Amz-Expires=86400&X-Amz-Signature=e906d75c4cf376f54e26b2edd81664dea65201341f2539793544f0b53264fe66&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22Foto_portada_landing_1.webp%22&response-content-type=image%2Fwebp&x-id=GetObject
