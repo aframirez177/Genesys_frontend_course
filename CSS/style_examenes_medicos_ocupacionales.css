@@ -43,7 +43,7 @@ img {
 
 /* Contenedor de fondo */
 .background-container {
-    background-image: url('../assets/Foto_portada_landing_1.jpg');
+    background-image: url('../assets/Foto_portada_landing_1.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -263,7 +263,7 @@ a:focus, button:focus {
     display: block;
     position: relative;
     padding:  10px;
-    background-image: url('../assets/patron_fondo.png');
+    background-image: url('../assets/patron_fondo.webp');
     background-size:auto;
     background-position: left;
     background-attachment:local;
@@ -384,7 +384,7 @@ a:focus, button:focus {
 .calculator-form{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items:baseline ;
     justify-content: center;
     width: 90%;
     margin-left: 17px;
@@ -394,7 +394,6 @@ a:focus, button:focus {
 }
 .container-input-group{
     justify-content: center;
-    align-self:baseline;
     align-content: center;
 }
 .input-group input{
@@ -431,7 +430,7 @@ a:focus, button:focus {
     height:fit-content;
     align-items: center;
     justify-content: center;
-    scale: 200%;
+    scale: 160%;
 }
 .checkbox-item label{
     font-size: .5rem;
@@ -638,8 +637,8 @@ a:focus, button:focus {
 
 .client-card {
     flex: 0 0 auto;
-    width: 10rem;
-    height: 10rem;
+    width: 18rem;
+    height: 18rem;
     margin: 0 1rem;
     display: flex;
     flex-direction: column;
@@ -658,8 +657,8 @@ a:focus, button:focus {
 .client-card img {
     margin-top: 0;
     align-items: center;
-    scale: 90%;
-    max-width: 10rem;
+    scale: 93%;
+    max-width: 18rem;
     max-height: 100%;
     object-fit: contain;
     filter: grayscale(100%);

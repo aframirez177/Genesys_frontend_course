@@ -32,6 +32,33 @@ const totalPriceElement = document.querySelector('.total-price');
 
 let lastSelectedExam = null;
 let totalExamPrice = 0;
+let jobPositions = [{ id: 0, examPrice: 0, workers: 1 }];
+let jobPositionCounter = 0;
+
+function createJobPosition() {
+    jobPositionCounter++;
+    const newPosition = { id: jobPositionCounter, examPrice: 0, workers: 1 };
+    jobPositions.push(newPosition);
+
+    const jobPositionHtml = `
+        <form class="container-input-group">
+            <div class="input-group">
+                <label for="cargo-${jobPositionCounter}"></label>
+                <input type="text" id="cargo-${jobPositionCounter}" name="cargo-${jobPositionCounter}" placeholder="Ingresa acá el cargo">
+            </div>
+            <div class="checkbox-group">
+                ${document.querySelector('.checkbox-group').innerHTML}
+            </div>
+            <div class="input-group-cantidad-trabajdores">
+                <label for="trabajadores-${jobPositionCounter}"># de trabajadores en el cargo:</label>
+                <input type="number" id="trabajadores-${jobPositionCounter}" name="trabajadores-${jobPositionCounter}" min="1" value="1">
+            </div>
+        </form>
+    `;
+    document.getElementById('job-positions').insertAdjacentHTML('beforeend', jobPositionHtml);
+    addEventListenersToJobPosition(jobPositionCounter);
+    calculateTotalPrice();
+}
 
 function formatPrice(price) {
     return new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0 }).format(price);
@@ -83,6 +110,8 @@ checkboxItems.forEach(item => {
         updateExamDescription(item.title, item.dataset.description, item.dataset.price);
     });
 
+
+
     item.addEventListener('mouseleave', () => {
         if (lastSelectedExam) {
             updateExamDescription(lastSelectedExam.title, lastSelectedExam.dataset.description, lastSelectedExam.dataset.price);
@@ -103,10 +132,16 @@ checkboxItems.forEach(item => {
     });
 });
 
+
 cargoInput.addEventListener('input', updatePackageSummary);
 trabajadoresInput.addEventListener('input', calculateTotalPrice);
 discount1Checkbox.addEventListener('change', updatePackageSummary);
 discount2Checkbox.addEventListener('change', updatePackageSummary);
+
+// Agregar event listener para el botón de agregar nuevo cargo
+document.querySelector('.btn-add').addEventListener('click', createJobPosition);
+
+
 
 calculateTotalPrice();
 console.log('Script loaded and executed');
