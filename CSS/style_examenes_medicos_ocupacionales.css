@@ -43,7 +43,7 @@ img {
 
 /* Contenedor de fondo */
 .background-container {
-    background-image: url('../assets/Foto_portada_landing_1.jpg');
+    background-image: url('../assets/Foto_portada_landing_1.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -212,7 +212,7 @@ nav a:hover {
     max-width: 70vw;
     padding: 2rem;
     border-radius: 10px;
-    animation: fadeIn 1s ease-out;
+    animation: fadeIn .8s ease-out;
 }
 
 @keyframes fadeInUp {
@@ -227,7 +227,7 @@ nav a:hover {
 }
 
 .fade-in-up {
-    animation: fadeInUp 0.5s ease-out;
+    animation: fadeInUp 0.3s ease-out;
 }
 h1 {
 
@@ -263,7 +263,7 @@ a:focus, button:focus {
     display: block;
     position: relative;
     padding:  10px;
-    background-image: url('../assets/patron_fondo.png');
+    background-image: url('../assets/patron_fondo.webp');
     background-size:auto;
     background-position: left;
     background-attachment:local;
