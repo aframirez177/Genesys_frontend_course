@@ -251,7 +251,7 @@ a:focus, button:focus {
     display: block;
     position: relative;
     padding:  10px;
-    background-image: url('../assets/patron_fondo.webp');
+    background-image: url('../assets/patron_fondo.png');
     background-size:auto;
     background-position: left;
     background-attachment:local;
