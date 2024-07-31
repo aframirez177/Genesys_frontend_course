@@ -182,10 +182,10 @@ nav a:hover {
 }
 
 .cta-button {
-    background-color: var(--primary-color);
+    background-color:var(--secondary-color);
     color: white;
     border: none;
-    font-size: 15px;
+    font-size: 2.2rem;
 }
 
 .cta-button-1 {
@@ -240,7 +240,7 @@ a:focus, button:focus {
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-bottom: 2rem;
     font-weight: 500;
     max-width: 400px;
