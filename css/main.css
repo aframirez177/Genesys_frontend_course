@@ -1,0 +1,395 @@
+@charset "UTF-8";
+/*rem units setings queda 1=10px*/
+html {
+  font-size: 62.5%;
+  color: #393e46;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* import de media queries */
+/* Definición de variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f0f0;
+  color: #2d3238;
+  line-height: 1.3;
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 2560px;
+}
+body p {
+  font-size: 1.6rem;
+  color: #2d3238;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+/* Mejoras en la tipografía */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800s;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #383d47;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+.green {
+  color: #93ddc2;
+}
+
+/* Optimización de imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Los botones */
+a {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #383d47;
+  transition: 0.2s;
+  position: relative;
+  min-width: 1rem;
+  align-items: center;
+  justify-content: center;
+  top: 5px;
+}
+
+a:hover {
+  font-weight: 800;
+}
+
+/* botones con contenedor */
+.cta-button,
+.cta-button-1 {
+  padding: 0.5rem 1.61rem;
+  border-radius: 18px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  transition: 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-button:hover,
+.cta-button-1:hover {
+  font-weight: 800;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* boton verde */
+.cta-button {
+  background-color: #93ddc2;
+  color: #383d47;
+  border: none;
+}
+
+/* Boton Transparente */
+.cta-button-1 {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #2d3238;
+  border: solid 1px #2d3238;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+
+/* Encabezado */
+header {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  max-width: 2560px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  padding: 2rem;
+}
+@media screen and (min-width: 769px) {
+  header {
+    padding: 8rem;
+  }
+}
+header .logo {
+  width: 150px;
+  height: auto;
+  margin: 1.16%;
+}
+header .ham-menu {
+  height: 38px;
+  width: 45px;
+  margin-left: auto;
+  position: relative;
+  top: -7px;
+  right: 25px;
+  z-index: 11;
+}
+@media screen and (min-width: 769px) {
+  header .ham-menu {
+    display: none;
+  }
+}
+header .ham-menu span {
+  display: block;
+  margin: 1px;
+  height: 4px;
+  width: 30px;
+  background-color: #393e46;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+header .ham-menu span:nth-child(1) {
+  top: 25%;
+}
+header .ham-menu span:nth-child(3) {
+  top: 75%;
+}
+header .ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+header .ham-menu.active span:nth-child(2) {
+  opacity: 0%;
+}
+header .ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+header .screen-menu {
+  display: none;
+}
+@media screen and (min-width: 769px) {
+  header .screen-menu {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.off-screen-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: rgba(147, 221, 194, 0.9294117647);
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 150px;
+  right: -150px;
+  padding-top: 100px;
+  justify-self: right;
+  align-items: center;
+  transition: 0.3s ease;
+  border-radius: 16px;
+  box-shadow: 0 10px 16px rgba(61, 67, 76, 0.4980392157);
+  z-index: 6;
+}
+
+.off-screen-menu.active {
+  right: -10px;
+  display: flex;
+}
+
+/* Contenedor de hero */
+.background-container-inicio {
+  background-image: url("../assets/foto_inicio_hero_background.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.background-container-inicio .hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.background-container-inicio .hero .hero-content {
+  position: relative;
+  top: 5rem;
+  max-width: 600px;
+  padding: 2rem;
+  animation: fadeIn 1s ease-out;
+}
+.background-container-inicio .hero .hero-content h1 {
+  line-height: 1.1;
+}
+@media screen and (min-width: 769px) {
+  .background-container-inicio .hero .hero-content h1 {
+    font-size: 5rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .background-container-inicio .hero .hero-content {
+    margin-left: 5rem;
+  }
+}
+.background-container-inicio .hero .hero-content .cta-button {
+  margin-top: 1rem;
+}
+
+/* Seccion de descripcion del programa */
+.program-description {
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 2.5rem;
+}
+.program-description h2 {
+  max-width: 400px;
+  margin-left: 2rem;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  padding: 0rem;
+  line-height: 100%;
+}
+.program-description .descripcion {
+  max-width: 400px;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  text-align: left;
+  padding: 2rem;
+}
+
+/* Sección de pasos */
+.steps {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.steps .step-card {
+  background-color: #FFF2FE;
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 210px;
+  height: 220px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 3rem 1rem;
+  -webkit-hyphens: none;
+          hyphens: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.1;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.steps .step-card h3 {
+  color: #93ddc2;
+  position: absolute;
+  top: -40px;
+  transform: translateY(-25%);
+  transform-origin: left center;
+  white-space: nowrap;
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  text-align: center;
+  transition: 0.2s;
+}
+.steps .step-card h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 11px;
+  color: #fff27d;
+  background-color: #93ddc2;
+  border-radius: 23px;
+  padding: 10px 10px;
+  position: absolute;
+  top: -20px;
+  text-align: center;
+  width: 150px;
+  transition: 0.2s;
+}
+.steps .step-card p {
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  padding: 0px;
+  height: -moz-max-content;
+  height: max-content;
+  text-align: center;
+  transition: 0.2s;
+  width: 60%;
+  font-size: 1.4rem;
+  top: 15%;
+  transform: translateY(-50%);
+}
+.steps .step-card .cta-button {
+  position: absolute;
+  margin-top: 60%;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  padding: 7px;
+  height: 40px;
+  width: 150px;
+  border-radius: 12px;
+  background-color: #fff27d;
+  color: #2d3238;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+.steps .step-card:hover h3 {
+  transition: 0.2s;
+  font-size: 40px;
+  top: -65px;
+}
+.steps .step-card:hover h4 {
+  background-color: #fff27d;
+  color: #2d3238;
+}
+.steps .step-card:hover p {
+  color: #fff27d;
+  font-weight: 700;
+}
+.steps .step-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.steps .step-card:hover {
+  transform: translateY(-40px);
+  box-shadow: 0 10px 20px #2d3238;
+  background-color: #93ddc2;
+}/*# sourceMappingURL=main.css.map */
