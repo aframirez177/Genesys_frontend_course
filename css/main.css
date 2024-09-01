@@ -236,7 +236,8 @@ header .screen-menu {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 400px;
 }
 .background-container-inicio .hero {
   height: 100vh;
