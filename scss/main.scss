@@ -43,6 +43,7 @@
     max-width: 2560px;
     p{
         font-size: 1.6rem;
+        margin: 2.5rem 0;
         color: $text-color;
         font-family: $font-body;
         font-weight: 500;
@@ -152,6 +153,10 @@
         height: auto;
         margin: 1.16%;
     }
+    .logo:hover{
+        transform: scale(120%);
+        transition: 0.2s
+    }
     .ham-menu {
         height: 38px;
         width: 45px;
@@ -251,6 +256,7 @@
             padding: 2rem;
             animation: fadeIn 1s ease-out;
         h1{
+            margin: 1rem 0;
             line-height: 1.1;
             @include tablet{
                 font-size: 5rem; 
