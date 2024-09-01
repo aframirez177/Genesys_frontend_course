@@ -140,7 +140,7 @@ header {
 }
 @media screen and (min-width: 769px) {
   header {
-    padding: 8rem;
+    padding: 3rem 8rem;
   }
 }
 header .logo {
