@@ -304,7 +304,7 @@ header .screen-menu {
   padding: 1rem;
 }
 .steps .step-card {
-  background-color: #FFF2FE;
+  background-color: #fff2fe;
   border-radius: 12px;
   padding: 1rem;
   max-width: 210px;
@@ -517,7 +517,7 @@ header .screen-menu {
 /* seccion de trajetas de servicios */
 .sst-services {
   padding: 0 5vw;
-  background-color: #f3f0f0;
+  background-color: #e6f0e1;
 }
 .sst-services .service-grid {
   display: flex;
@@ -535,14 +535,14 @@ header .screen-menu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 300px;
+  min-height: 250px;
 }
 .sst-services .service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .sst-services .service-card h3 {
-  font-size: 2.9rem;
+  font-size: 2.4rem;
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   margin-bottom: 1rem;
@@ -575,33 +575,39 @@ header .screen-menu {
 }
 .sst-services .service-card:nth-child(1) {
   text-align: left;
-  background-color: #E6F3F0;
+  background-color: #e6f3f0;
 }
 .sst-services .service-card:nth-child(2) {
   text-align: right;
   justify-content: right;
-  background-color: #FCE4EC;
+  background-color: #fce4ec;
 }
-.sst-services .service-card:nth-child(2) h3, .sst-services .service-card:nth-child(2) p {
+.sst-services .service-card:nth-child(2) h3,
+.sst-services .service-card:nth-child(2) p {
   text-align: right;
-  align-self: flex-end;
+  align-self: center;
 }
 .sst-services .service-card:nth-child(2) .cta-button {
   align-self: flex-end;
   align-content: end;
 }
+.sst-services .service-card:nth-child(2) .green {
+  justify-self: end;
+  position: relative;
+}
 .sst-services .service-card:nth-child(3) {
   text-align: left;
-  background-color: #FFF9C4;
+  background-color: #fff9c4;
 }
 .sst-services .service-card:nth-child(4) {
   text-align: right;
   justify-content: right;
-  background-color: #E1F5FE;
+  background-color: #e1f5fe;
 }
-.sst-services .service-card:nth-child(4) h3, .sst-services .service-card:nth-child(4) p {
+.sst-services .service-card:nth-child(4) h3,
+.sst-services .service-card:nth-child(4) p {
   text-align: right;
-  align-self: flex-end;
+  align-self: center;
 }
 .sst-services .service-card:nth-child(4) .cta-button {
   align-self: flex-end;
@@ -609,16 +615,17 @@ header .screen-menu {
 }
 .sst-services .service-card:nth-child(5) {
   text-align: left;
-  background-color: #E8F5E9;
+  background-color: #e8f5e9;
 }
 .sst-services .service-card:nth-child(6) {
   text-align: right;
   justify-content: right;
-  background-color: #FFF3E0;
+  background-color: #fff3e0;
 }
-.sst-services .service-card:nth-child(6) h3, .sst-services .service-card:nth-child(6) p {
+.sst-services .service-card:nth-child(6) h3,
+.sst-services .service-card:nth-child(6) p {
   text-align: right;
-  align-self: flex-end;
+  align-self: center;
 }
 .sst-services .service-card:nth-child(6) .cta-button {
   align-self: flex-end;
@@ -640,5 +647,338 @@ header .screen-menu {
   }
   .sst-services .service-card .cta-button {
     margin: 0 3rem;
+  }
+}
+
+/* Sección de clientes */
+.section-clientes {
+  background-color: white;
+  padding: 2rem 5%;
+  overflow: hidden;
+}
+.section-clientes h2 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 4rem;
+  margin: 0;
+}
+.section-clientes p {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  margin: 0;
+}
+.section-clientes .clients {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  padding: 1.5rem 0;
+  margin: 2vw 0 40px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.section-clientes .clients::-webkit-scrollbar {
+  display: none;
+}
+.section-clientes .client-card {
+  flex: 0 0 auto;
+  width: 13rem;
+  height: 15rem;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.section-clientes .client-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section-clientes .client-card img {
+  margin-top: 0;
+  align-items: center;
+  max-width: 10rem;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  -o-object-fit: fill;
+     object-fit: fill;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.section-clientes .client-card:hover {
+  transform: scale(1.05);
+}
+.section-clientes .client-card:hover img {
+  filter: grayscale(1%);
+}
+.section-clientes .client-card p {
+  font-size: 1.2 rem;
+  margin-top: 10px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Sección de ubicación */
+.location-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f8f8;
+  padding: 4rem 0;
+  margin: 0 0;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.location-section h2 {
+  color: #4fd1c5;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.location-section .map-controls {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+  gap: 0.8rem;
+  margin: 1rem;
+  max-width: 50rem;
+  align-items: center;
+}
+.location-section .map-button {
+  max-width: 12rem;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.3s;
+}
+.location-section .map-button:hover {
+  background-color: #d0d0d0;
+}
+.location-section .map-button img {
+  width: auto;
+  height: auto;
+}
+.location-section #map-container {
+  width: 100%;
+  height: 40rem;
+  overflow: hidden;
+}
+.location-section p {
+  margin-top: 4rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+/*footer*/
+.site-footer {
+  background-color: #5c8578;
+  color: #f3f0f0;
+  padding: 3rem 1rem;
+  font-family: "Raleway", sans-serif;
+}
+.site-footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: baseline;
+  gap: 0;
+}
+.site-footer .footer-content a, .site-footer .footer-content p, .site-footer .footer-content h4 {
+  font-size: 1.3rem;
+}
+.site-footer .footer-section {
+  flex: 1;
+  min-width: 28rem;
+  max-width: 30rem;
+  margin: 1rem;
+}
+.site-footer .footer-section h3 {
+  color: #5dc4af;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.site-footer .footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+.site-footer .footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+.site-footer .footer-section ul li a {
+  color: #f3f0f0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.site-footer .footer-section ul li a:hover {
+  color: #5dc4af;
+}
+.site-footer .certification-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  gap: 2rem;
+  margin: 2rem 0.5rem;
+  justify-content: baseline;
+}
+.site-footer .certification-img {
+  width: 110%;
+  height: auto;
+  margin: 0.3rem;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.site-footer .footer-section-contact-info {
+  min-width: 28rem;
+  max-width: 30rem;
+  margin: 1rem;
+}
+.site-footer .footer-section-contact-info h3, .site-footer .footer-section-contact-info h4 {
+  color: #5dc4af;
+  margin: 1rem 0;
+}
+.site-footer .footer-section-contact-info a {
+  color: #f3f0f0;
+}
+.site-footer .footer-bottom {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.9rem;
+  color: #d0d0d0;
+}
+.site-footer .footer-bottom a {
+  font-weight: 800;
+  color: #fff27d;
+}
+.site-footer .footer-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.site-footer .footer-logos .footer-logo {
+  height: 6rem;
+  width: auto;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 93px;
+  height: 93px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: transform 0.5s ease;
+}
+.whatsapp-button:hover {
+  transform: scale(1.16);
+}
+.whatsapp-button img {
+  width: 55px;
+  height: auto;
+}
+.whatsapp-popup {
+  display: none;
+  position: fixed;
+  bottom: 140px;
+  right: 50px;
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+.popup-header {
+  background-color: #075E54;
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.popup-content {
+  padding: 15px;
+}
+
+.advisor-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.advisor-info {
+  flex-grow: 1;
+}
+.advisor-info h3, .advisor-info p {
+  margin: 0;
+}
+
+#close-popup {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.start-chat-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+.start-chat-button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 400px) {
+  .whatsapp-button {
+    width: 5.1rem;
+    height: 5.1rem;
+  }
+  .whatsapp-popup {
+    width: 250px;
+  }
+  .whatsapp-icon {
+    width: 30px;
+    height: 30px;
   }
 }/*# sourceMappingURL=main.css.map */

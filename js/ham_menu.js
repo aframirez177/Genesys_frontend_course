@@ -7,11 +7,11 @@ hamMenu.addEventListener("click", () => {
     offScreenMenu.classList.toggle("active");
 });
 
-const expandCalc = document.querySelector(".colapsable-cargo-button");
+/* const expandCalc = document.querySelector(".colapsable-cargo-button");
 
 const offScreenItems = document.querySelector(".checkbox-group");
 
 expandCalc.addEventListener("click", () => {
     expandCalc.classList.toggle("active");
     offScreenItems.classList.toggle("inactive");
-});
+}); */
