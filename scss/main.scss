@@ -534,3 +534,130 @@
             }
         }
     }
+
+    /* seccion de trajetas de servicios */
+    .sst-services {
+        padding: 0 5vw;
+        background-color: $background-color;
+    
+        .service-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0rem; // Añadimos un pequeño espacio entre las tarjetas
+            justify-content: center; // Centramos las tarjetas
+        }
+    
+        .service-card {
+            background-color: white;
+            padding: 2rem 3rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            align-items: center;
+            max-width: 700px; // Limitamos el ancho máximo
+            display: flex;
+            flex-direction: column; // Organizamos el contenido verticalmente
+            justify-content: space-between; // Distribuimos el contenido verticalmente
+            min-height: 300px; // Establecemos una altura mínima
+    
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+    
+            h3 {
+                font-size: 2.9rem; // Reducimos un poco el tamaño para móviles
+                font-family: $font-title;
+                font-weight: 800;
+                margin-bottom: 1rem;
+                color: $text-color;
+                line-height: 1.2;
+                width: 60vw;
+                max-width: 450px;
+                align-self: baseline;
+            }
+    
+            p {
+                font-size: 1.4rem;
+                margin-bottom: 1.5rem;
+                flex-grow: 1; // Permite que el párrafo crezca para llenar el espacio
+                max-width: 450px;
+                align-self: baseline;
+            }
+    
+            .cta-button {
+                background-color: $primary-color;
+                color: white;
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                align-self: flex-start; // Alineamos el botón al inicio
+                margin: 0 1rem; // Ajustamos el margen para móviles
+    
+                &:hover {
+                    background-color: $secondary-color;
+                }
+            }
+    
+            // Estilos específicos para cada tarjeta
+            @for $i from 1 through 6 {
+                &:nth-child(#{$i}) {
+                    @if $i % 2 == 0 {
+                        
+                        text-align: right;
+                        justify-content: right;
+                        h3, p{
+                            text-align: right;
+                            align-self: flex-end;
+                            
+                        }
+                        .cta-button { align-self: flex-end; 
+                        align-content: end;}
+                    } @else {
+                        text-align: left;
+                        
+                    }
+    
+                    @if $i == 1 {
+                        background-color: #E6F3F0;
+                    } @else if $i == 2 {
+                        background-color: #FCE4EC;
+                    } @else if $i == 3 {
+                        background-color: #FFF9C4;
+                    } @else if $i == 4 {
+                        background-color: #E1F5FE;
+                    } @else if $i == 5 {
+                        background-color: #E8F5E9;
+                    } @else if $i == 6 {
+                        background-color: #FFF3E0;
+                    }
+                }
+            
+    }
+        }
+    
+        // Media query para tablets y escritorio
+        @include tablet {
+            .service-grid {
+                flex-wrap: wrap;
+            }
+    
+            .service-card {
+                flex: 0 1 calc(50% - 1rem); // Dos columnas en tablet
+                
+                h3 {
+                    font-size: 3.5rem; // Volvemos al tamaño original para pantallas más grandes
+                    padding: 0 3rem;
+                }
+    
+                p {
+                    padding: 0 3rem;
+                }
+    
+                .cta-button {
+                    margin: 0 3rem;
+                }
+            }
+        }
+    }
