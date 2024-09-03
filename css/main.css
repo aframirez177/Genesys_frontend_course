@@ -59,7 +59,7 @@ h2 {
 }
 
 .green {
-  color: #93ddc2;
+  color: #5dc4af;
 }
 
 /* Optimización de imágenes */
@@ -112,7 +112,7 @@ a:hover {
 
 /* boton verde */
 .cta-button {
-  background-color: #93ddc2;
+  background-color: #5dc4af;
   color: #383d47;
   border: none;
 }
@@ -325,7 +325,7 @@ header .screen-menu {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .steps .step-card h3 {
-  color: #93ddc2;
+  color: #5dc4af;
   position: absolute;
   top: -40px;
   transform: translateY(-25%);
@@ -341,7 +341,7 @@ header .screen-menu {
   font-family: "Raleway", sans-serif;
   font-size: 11px;
   color: #fff27d;
-  background-color: #93ddc2;
+  background-color: #5dc4af;
   border-radius: 23px;
   padding: 10px 10px;
   position: absolute;
@@ -398,5 +398,5 @@ header .screen-menu {
 .steps .step-card:hover {
   transform: translateY(-40px);
   box-shadow: 0 10px 20px #2d3238;
-  background-color: #93ddc2;
+  background-color: #5dc4af;
 }/*# sourceMappingURL=main.css.map */
