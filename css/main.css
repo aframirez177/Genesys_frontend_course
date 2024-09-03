@@ -678,6 +678,7 @@ header .screen-menu {
   overflow-x: auto;
   padding: 1.5rem 0;
   margin: 2vw 0 40px;
+  height: 30rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
