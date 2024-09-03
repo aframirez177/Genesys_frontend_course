@@ -406,3 +406,123 @@
         background-color:$primary-color;
     }
     }
+
+    .mujeres-lideres {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-content: center;
+        position: relative;
+        padding: .5rem;
+        background-color: #e6f0e1;
+        min-height: 320px;
+        padding-bottom: 20px;
+    
+        .mujeres-lideres-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            align-self: center;
+            justify-content: center;
+            justify-items: center;
+            .text-container{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                width: 80vw;
+                max-width: 500px;
+            }   
+        }
+    
+        h2 {
+            font-family: $font-title;
+            text-align: left;
+            align-content: center;
+            align-items: center;
+            padding-top: 0;
+            margin-top: 0px;
+            line-height: 100%;
+            font-size: 2.6rem;
+            color: $secondary-color;
+            font-weight: 800;
+            max-width: 600px;
+        }
+    
+        p {
+            max-width: 600px;
+            font-size: 1.6rem;
+            margin: 2.5rem 0;
+            color: $text-color;
+            font-family: $font-body;
+            font-weight: 500;
+        }
+    
+        .features {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            width: 90%;
+        }
+    
+        .feature {
+            padding: 2rem;
+            text-align: left;
+            height: fit-content;
+            width: fit-content;
+            scale: 90%;
+            align-self: baseline;
+    
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+    
+            h3 {
+                font-family: $font-title;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                color: $primary-color;
+            }
+    
+            p {
+                font-size: 1.1rem;
+                hyphens: none;
+                line-height: 150%;
+                font-weight: 600;
+            }
+    
+            .icon {
+                font-size: 2rem;
+                color: $primary-color;
+                margin-bottom: 1rem;
+            }
+        }
+    
+        .image-content {
+            img {
+                max-width: 400px;
+                height: auto;
+            }
+        }
+    }
+    
+    @include tablet {
+        .section-women-leaders {
+            .women-leaders-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+    
+            .text-content {
+                width: 50%;
+            }
+    
+            .image-content {
+                width: 45%;
+            }
+        }
+    }
