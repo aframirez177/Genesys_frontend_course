@@ -793,21 +793,25 @@ header {
         background-color: #e0e0e0;
         border: none;
         border-radius: 2rem;
+        margin-bottom: 2.5rem;
         padding: 1rem 2rem;
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 1rem;
         cursor: pointer;
         align-self: center;
-        transition: background-color 0.3s;
+        transition: background-color 0.3s, transform 0.3s;
 
         &:hover {
             background-color: #d0d0d0;
+            transform: translateY(-3px);
         }
 
         img {
-            width: auto;
-            height: auto;
+            width: 20rem; // Cambia esto de 10rem a auto
+            height: 2.2rem; // Ajusta la altura a un valor más apropiado
+            object-fit:cover; // Asegura que la imagen se ajuste correctamente
         }
     }
 
@@ -927,11 +931,20 @@ header {
         margin-bottom: 1rem;
 
         .footer-logo {
-            height: 6rem;
-            width: auto;
+            height: auto;
+            width: 20rem;
+            object-fit: fill;
+            
+        }
+        .disclaimer{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 500px;
         }
     }
 }
+
 
 // WhatsApp Button and Popup
     .whatsapp {
@@ -939,8 +952,8 @@ header {
         position: fixed;
         bottom: 30px;
         right: 30px;
-        width: 93px;
-        height: 93px;
+        width: 90px;
+        height: 90px;
         background-color: #25D366;
         border-radius: 50%;
         @include flex-center;
@@ -954,8 +967,9 @@ header {
         }
     
         img {
-            width: 55px;
+            width: 70px;
             height: auto;
+            object-fit: fill;
         }
         }
     
@@ -1036,6 +1050,9 @@ header {
         &-button {
             width: 5.1rem;
             height: 5.1rem;
+            img{
+              scale: 130%;
+            }
         }
     
         &-popup {
@@ -1044,7 +1061,7 @@ header {
         }
     
         .whatsapp-icon {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         }
     }
