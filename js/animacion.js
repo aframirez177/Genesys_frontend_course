@@ -151,10 +151,87 @@ document.addEventListener('DOMContentLoaded', function() {
 console.log('hola mundo este es un mensaje secreto que no se puede ver');
 
 
-
-
-
-
-
-
-
+    /* FAQ section */
+    
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqsGrid = document.querySelector('.faqs__grid');
+            
+            const faqs = [
+            {
+                question: "¿Cuánto me va a costar implementar un programa de SST completo?",
+                answer: "En Genesys, adaptamos nuestros programas de SST a las necesidades específicas de tu empresa. Ofrecemos soluciones flexibles y escalables, asegurando que obtengas el mejor valor por tu inversión sin comprometer la calidad. Contáctanos para una cotización personalizada y descubre cómo podemos ayudarte a mejorar la salud y seguridad en tu lugar de trabajo."
+            },
+            {
+                question: "¿Hay opciones económicas que aún cumplan con todos los requisitos legales?",
+                answer: "Sí, en Genesys entendemos la importancia de cumplir con las normativas legales sin exceder tu presupuesto. Ofrecemos opciones económicas que garantizan el cumplimiento total de los requisitos legales en salud y seguridad laboral, adaptándonos a las particularidades de tu empresa."
+            },
+            {
+                question: "¿Este proveedor tiene experiencia con empresas de mi tamaño y sector?",
+                answer: "Genesys ha trabajado con una amplia variedad de empresas de diferentes tamaños y sectores. Adaptamos nuestros servicios a las necesidades específicas de cada cliente, garantizando resultados efectivos y personalizados que impulsan la seguridad y productividad en tu lugar de trabajo."
+            },
+            {
+                question: "¿Cómo puedo minimizar el tiempo que los empleados pasan fuera del trabajo para estos exámenes?",
+                answer: "Con nuestros exámenes médicos ocupacionales y evaluaciones personalizadas, minimizamos el tiempo fuera del trabajo a través de una planificación eficiente y el uso de tecnología avanzada. Así, garantizamos que los exámenes se realicen de manera rápida y sin interrupciones significativas para tu negocio."
+            },
+            {
+                question: "¿Cuánto me va a costar implementar un programa de SST completo?",
+                answer: "En Genesys, adaptamos nuestros programas de SST a las necesidades específicas de tu empresa. Ofrecemos soluciones flexibles y escalables, asegurando que obtengas el mejor valor por tu inversión sin comprometer la calidad. Contáctanos para una cotización personalizada y descubre cómo podemos ayudarte a mejorar la salud y seguridad en tu lugar de trabajo."
+            },
+            {
+                question: "¿Hay opciones económicas que aún cumplan con todos los requisitos legales?",
+                answer: "Sí, en Genesys entendemos la importancia de cumplir con las normativas legales sin exceder tu presupuesto. Ofrecemos opciones económicas que garantizan el cumplimiento total de los requisitos legales en salud y seguridad laboral, adaptándonos a las particularidades de tu empresa."
+            },
+            {
+                question: "¿Este proveedor tiene experiencia con empresas de mi tamaño y sector?",
+                answer: "Genesys ha trabajado con una amplia variedad de empresas de diferentes tamaños y sectores. Adaptamos nuestros servicios a las necesidades específicas de cada cliente, garantizando resultados efectivos y personalizados que impulsan la seguridad y productividad en tu lugar de trabajo."
+            },
+            {
+                question: "¿Cómo puedo minimizar el tiempo que los empleados pasan fuera del trabajo para estos exámenes?",
+                answer: "Con nuestros exámenes médicos ocupacionales y evaluaciones personalizadas, minimizamos el tiempo fuera del trabajo a través de una planificación eficiente y el uso de tecnología avanzada. Así, garantizamos que los exámenes se realicen de manera rápida y sin interrupciones significativas para tu negocio."
+            }
+            ];
+        
+            faqs.forEach((faq, index) => {
+            const faqItem = document.createElement('div');
+            faqItem.classList.add('faqs__item');
+            faqItem.innerHTML = `
+                <div class="faqs__question" tabindex="0" aria-expanded="false" aria-controls="faq-answer-${index}">
+                ${faq.question}
+                </div>
+                <div id="faq-answer-${index}" class="faqs__answer" aria-hidden="true">
+                ${faq.answer}
+                </div>
+            `;
+            faqsGrid.appendChild(faqItem);
+            });
+        
+            const questions = document.querySelectorAll('.faqs__question');
+            
+            questions.forEach(question => {
+            question.addEventListener('click', toggleFaq);
+            question.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleFaq.call(question);
+                }
+            });
+            });
+        
+            function toggleFaq() {
+            const answer = this.nextElementSibling;
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            this.setAttribute('aria-expanded', !isExpanded);
+            answer.setAttribute('aria-hidden', isExpanded);
+        
+            this.classList.toggle('faqs__question--active');
+            answer.classList.toggle('faqs__answer--active');
+        
+            if (!isExpanded) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            } else {
+                answer.style.maxHeight = null;
+            }
+            }
+        });

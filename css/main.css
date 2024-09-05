@@ -1000,4 +1000,132 @@ header .screen-menu {
     width: 40px;
     height: 40px;
   }
+}
+/* seccion faqs */
+.faqs {
+  padding: 6rem 2rem;
+  background-color: #f3f0f0;
+}
+.faqs__container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.faqs__title {
+  font-size: 3.6rem;
+  color: #383d47;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.faqs__description {
+  font-size: 1.8rem;
+  color: #2d3238;
+  text-align: center;
+  margin-bottom: 5rem;
+  font-family: "Raleway", sans-serif;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.faqs__grid {
+  display: grid;
+  gap: 2rem;
+}
+@media screen and (min-width: 769px) {
+  .faqs__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.faqs__item {
+  border-radius: 0.8rem;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.faqs__item:hover {
+  box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+.faqs__question {
+  padding: 2rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  color: #383d47;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.faqs__question::after {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23383d47"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7a.9959.9959 0 010-1.41c.39-.38 1.03-.39 1.42 0z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: transform 0.3s ease;
+}
+.faqs__question--active {
+  background-color: #5dc4af;
+  color: white;
+}
+.faqs__question--active::after {
+  transform: rotate(180deg);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7a.9959.9959 0 010-1.41c.39-.38 1.03-.39 1.42 0z"/></svg>');
+}
+.faqs__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  color: #2d3238;
+  padding: 0 2rem;
+}
+.faqs__answer--active {
+  max-height: 50rem;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+}
+.faqs__contact {
+  text-align: center;
+  margin-top: 6rem;
+  padding: 4rem 2rem;
+}
+.faqs__contact-title {
+  font-size: 2.8rem;
+  color: #383d47;
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.faqs__contact-description {
+  font-size: 1.8rem;
+  color: #2d3238;
+  margin-bottom: 3rem;
+  font-family: "Raleway", sans-serif;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.faqs__contact-button {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  background-color: #5dc4af;
+  color: white;
+  text-decoration: none;
+  border-radius: 5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.faqs__contact-button:hover {
+  background-color: #40ae98;
+  transform: translateY(-3px);
+}
+.faqs__contact-button:active {
+  transform: translateY(-1px);
 }/*# sourceMappingURL=main.css.map */
