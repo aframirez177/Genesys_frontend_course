@@ -8,8 +8,8 @@
             <!-- Fabicon-->
         <link rel="icon" type="image/png" href="./assets/logo_solo_fabicon.png" sizes="16x10 32x20">
             <!--Seccion de Estilos-->
-        <link rel="stylesheet" href="CSS/style_examenes_medicos_ocupacionales.css">
-        <link rel="stylesheet" href="CSS/tablet_style_examenes_medicos_ocupacionales.css" media="screen and (min-width: 769px)">
+        <link rel="stylesheet" href="../css/main.css">
+        
             <!-- Preconexión a Google Fonts para mejorar el rendimiento -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,39 +49,71 @@
 
     </head>
 <body>
-    <div class="background-container">
+    <div class="background-container-inicio">
         <header>
-            <a href="./Index.html" class="bogoton-logo">   
-                <img src="./assets/Logo_compuesto_fullcolor_horizontal_negro@2x.webp" alt="Genesys Logo" class="logo">
-            </a>
+            <img
+            src="../assets/logo_color_vectores.svg"
+            alt="Genesys Logo"
+            class="logo"
+            />
             <nav class="screen-menu">
-                <a href="#servicios">Servicios</a>
-                <a href="#beneficios">Beneficios</a>
-                <a href="#contacto">Contacto</a>    
+            <a href="#">Nosotros</a>
+            <a href="#">FAQ</a>
+            <a href="#">SST</a>
+            <a href="#">Genesys BI</a>
+            <a href="#">Servicios</a>
+            <div class="dropdown">
+                <button class="dropdown-toggle" aria-expanded="false" aria-controls="services-menu">
+                    Servicios
+                </button>
+            </div>
+            <button class="cta-button-1">Log In</button>
+            <button class="cta-button">Sign Up</button>
             </nav>
             <div class="ham-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>    
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
         </header>
+        <div id="services-menu" class="dropdown-menu" aria-hidden="true">
+            <div class="dropdown-menu-content">
+                <ul>
+                    <li><a href="#matriz-riesgos">Matriz de riesgo profesional</a></li>
+                    <li><a href="#profesiograma">Profesiograma</a></li>
+                    <li><a href="#examenes-ocupacionales">Exámenes Médico Ocupacionales</a></li>
+                    <li><a href="#bateria-psicosocial">Batería de riesgo Psicosocial</a></li>
+                    <li><a href="#analisis-puesto">Análisis de puesto de trabajo</a></li>
+                    <li><a href="#sst">SST</a></li>
+                    <li><a href="#examen-escolar">Examen Médico Escolar</a></li>
+                    <li><a href="#perdida-capacidad">Pérdida de capacidad Laboral</a></li>
+                </ul>
+            </div>
+        </div>
         <nav class="off-screen-menu">
-            <a href="#servicios">Servicios</a>
-            <a href="#beneficios">Beneficios</a>
-            <a href="#contacto">Contacto</a>    
+            <a href="#">Nosotros</a>
+            <a href="#">SST app</a>
+            <a href="#">Genesys BI</a>
+            <a href="#">Servicios</a>
+            <button class="cta-button-1">Log In</button>
+            <button class="cta-button">Sign Up</button>
         </nav>
-    
-    
         <section class="hero">
             <div class="hero-content">
-                <h1>Realizamos tus <span class="green">Examenes Medicos Ocupacionales</span> en Bogotá</h1>
-                <p>
-                    Proteje a tus empleados y cumple con la normativa colombiana con nuestros 
-                    servicios integrales de SST te guiamos en todo el proceso</p>
-                <button class="cta-button">Empieza aquí</button>
+            <h1>
+                <span class="green">Cumple</span> con todos los
+                <span class="green">requisitos</span> en SALUD LABORAL
+                <span class="green">(SGSST)</span>
+            </h1>
+            <p class="intro">
+                No vivimos para trabajar. trabajamos para tener una mejor vida.
+                encuentra aca un proveedor confiable que se ajusta a tus
+                necesidades. Evita sanciones de ley. Te guiamos en todo el proceso
+            </p>
+            <button class="cta-button">Empieza aquí</button>
             </div>
         </section>
-    </div>
+        </div>
     
     <main>
         <section class="section-servicios" id="servicios">
