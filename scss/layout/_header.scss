@@ -121,34 +121,38 @@ header {
     position: absolute;
     left: 0;
     right: 0;
-    top: 12rem;
+    top: 11rem;
     background-color: map-get($colors,"background");
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    padding: 2rem 0;
+    padding: 2rem 2rem;
 
     &[aria-hidden="false"] {
         display: block;
     }
 
     .dropdown-menu-content {
-        max-width: 590px;
-        margin: 0 6.5rem;
+        max-width: 1080px;
+        margin: 0 1.5rem;
         padding: 0 2rem;
+        max-height: 45rem;
     }
 
     ul {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
+        max-width: 15rem;
         justify-content: space-between;
         list-style-type: none;
         padding: 0;
-        margin: 0;
+        margin: 0 4rem;
+        max-height: 40rem;
     }
 
     li {
         flex: 0 0 calc(25% - 1rem);
-        margin: 3rem;
+        margin: 3rem 1rem;
         min-width: 250px;
         height: 2rem;
 
@@ -171,7 +175,6 @@ header {
 
     @include respond-to ("mobile") {
     .dropdown-menu {
-        position: static;
         box-shadow: none;
         padding: 1rem 0;
 
